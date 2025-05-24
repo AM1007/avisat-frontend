@@ -13,9 +13,29 @@
     ├── vercel.svg
     └── window.svg
 ├── src
-    └── app
+    ├── app
     │   ├── favicon.ico
     │   ├── globals.css
     │   ├── layout.tsx
     │   └── page.tsx
+    ├── components
+    │   ├── layout
+    │   │   ├── Footer.tsx
+    │   │   ├── Header.tsx
+    │   │   ├── Layout.tsx
+    │   │   └── MobileMenu.tsx
+    │   ├── sections
+    │   │   ├── AboutSection.tsx
+    │   │   ├── ArticlesSection.tsx
+    │   │   ├── ContactSection.tsx
+    │   │   ├── HeroSection.tsx
+    │   │   └── ServicesSection.tsx
+    │   └── ui
+    │   │   ├── ArticleCard.tsx
+    │   │   ├── Button.tsx
+    │   │   ├── ContactForm.tsx
+    │   │   └── ServiceCard.tsx
+    └── styles
+    │   └── variables.css
+├── structure.txt
 └── tsconfig.json

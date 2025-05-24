@@ -1,0 +1,239 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Мобильная версия хедера */
+.mobileHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobileHeader {
+    display: none;
+  }
+}
+
+
+.mobileContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* border: 1px solid green; */
+}
+
+.logo {
+  /* border: 1px solid red; */
+  display: flex;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+.logo {
+  /* border: 1px solid red; */
+  display: flex;
+  align-self: center;
+  margin-top: 0;
+}
+}
+
+.flagButtonContainer{
+  border: 1px solid red;
+}
+
+.flagMobile{
+  margin-bottom: 10px;
+}
+
+
+/* Десктопная версия хедера */
+.desktopHeader {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.logoMobileInDesktop {
+  display: block;
+}
+
+@media (min-width: 1440px) {
+  .logoMobileInDesktop {
+    display: none; /* Скрываем мобильный логотип */
+  }
+}
+
+.logoDesktop {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .logoDesktop {
+    display: block; 
+    width: 213px;
+  }
+}
+
+/* Левая часть хедера (черная) */
+.leftHeader {
+  background-color: transparent;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.leftContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 25px 20px;
+  width: 100%;
+  max-width: 720px;
+  border-right: 2px solid #ff0000;
+}
+
+/* Правая часть хедера (белая) */
+.rightHeader {
+
+  background-color:transparent;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rightContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px 25px 0;
+  width: 100%;
+  max-width: 720px; 
+  border-left: 2px solid #ff0000
+}
+
+/* Навигация */
+.leftNavigation, .rightNavigation {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+}
+
+.navLink {
+  transition: color 0.2s;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-strong), Arial, sans-serif;
+  font-size: 15px;
+  position: relative;
+  padding: 3px 20px;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+}
+
+.navLink:hover {
+  color: #ff0000; 
+}
+
+.navLinkLight {
+  color: #171717; 
+}
+
+.navLinkLight:hover {
+  color: #ff0000;
+}
+
+.navLink:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 1px;
+  background-color: white;
+}
+
+.navLinkLight:not(:last-child)::after {
+  background-color: #171717;
+}
+
+/* Флаг и телефон */
+.flagDesktopContainer {
+  display: flex;
+  align-items: center;
+}
+
+.flagDesktopSmall {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.flagDesktopSmall img {
+  transform: scaleY(1.5);
+  transform-origin: left;
+}
+
+@media (min-width: 1440px) {
+.flagDesktopSmall{
+display: none;
+}
+}
+
+.flagDesktop {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+.flagDesktop {
+  display: block;
+  height: 65px;
+  width: 33px;
+ 
+}
+}
+
+.phoneLink {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+.phoneLink {
+  font-family: var(--font-nunito) ;
+  font-size: 20px;
+  padding: 16px 58px;
+  border: 1px solid red;
+  display: block;
+  background-color: #ff0000;
+  color: #F5F5F5;
+  
+}
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}

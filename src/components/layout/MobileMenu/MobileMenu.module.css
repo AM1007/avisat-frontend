@@ -1,0 +1,157 @@
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Отключаем взаимодействие когда меню скрыто */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileMenuOverlay.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Включаем взаимодействие когда меню открыто */
+}
+
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition-delay: 0.05s; /* Небольшая задержка для эффекта последовательности */
+}
+
+.open .mobileMenuContent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.flagContainer {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.phoneContainer {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.phoneLink {
+  color: white;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.closeButtonContainer {
+  width: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #ef4444;
+}
+
+.menuNavigation {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menuItem {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Базовая задержка устанавливается через inline стили для каждого элемента */
+}
+
+.open .menuItem {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuItem:last-child {
+  margin-bottom: 0;
+}
+
+.menuLink {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: var(--font-strong), Arial, sans-serif;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.menuLink:hover {
+  color: #ef4444;
+}
+
+.menuFooter {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition-delay: 0.3s; /* Задержка появления футера после элементов меню */
+}
+
+.open .menuFooter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.consultButton {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: var(--font-strong), Arial, sans-serif;
+}
+
+.consultButton:hover {
+  background-color: #ef4444;
+  color: white;
+}

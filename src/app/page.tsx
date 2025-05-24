@@ -1,4 +1,4 @@
-// import HeroSection from "@/components/sections/HeroSection";
+import HeroSection from "@/components/sections/HeroSection/HeroSection";
 // import AboutSection from "@/components/sections/AboutSection";
 // import ServicesSection from "@/components/sections/ServicesSection";
 // import ArticlesSection from "@/components/sections/ArticlesSection";
@@ -11,13 +11,13 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      {/* <main className="flex-grow">
+      <main className="flex-grow">
         <HeroSection />
-        <AboutSection />
+        {/* <AboutSection />
         <ServicesSection />
         <ArticlesSection />
-        <ContactSection />
-      </main> */}
+        <ContactSection /> */}
+      </main>
 
       {/* <Footer /> */}
     </div>

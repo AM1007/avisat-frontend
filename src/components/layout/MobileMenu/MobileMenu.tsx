@@ -4,12 +4,14 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "../../../data/dataLinks";
+import styles from './MobileMenu.module.css';
 
 interface MobileMenuProps {
   closeMenu: () => void;
+  isOpen?: boolean; // Делаем свойство необязательным, добавляя знак вопроса
 }
 
-export default function MobileMenu({ closeMenu }: MobileMenuProps) {
+export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -19,6 +21,7 @@ export default function MobileMenu({ closeMenu }: MobileMenuProps) {
 
     document.addEventListener("keydown", handleEscape);
 
+    // Блокируем прокрутку страницы при открытом меню
     document.body.style.overflow = "hidden";
 
     return () => {
@@ -28,12 +31,10 @@ export default function MobileMenu({ closeMenu }: MobileMenuProps) {
   }, [closeMenu]);
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-95 z-10">
-      <div className="container mx-auto h-full flex flex-col">
-        
-        <div className="py-6 border-b border-gray-800 flex justify-between items-center px-4">
-          
-          <div className="flex items-center w-8">
+    <div className={`${styles.mobileMenuOverlay} ${isOpen ? styles.open : ''}`}>
+      <div className={styles.mobileMenuContent}>
+        <div className={styles.menuHeader}>
+          <div className={styles.flagContainer}>
             <Image
               src="/icons/FlagMobile.svg"
               alt="Український прапор"
@@ -43,15 +44,15 @@ export default function MobileMenu({ closeMenu }: MobileMenuProps) {
             />
           </div>
           
-          <div className="flex-1 text-center">
-            <a href="tel:+380444066970" className="text-white text-lg ml-3 sm:ml-4 md:ml-6 lg:ml-8">
+          <div className={styles.phoneContainer}>
+            <a href="tel:+380444066970" className={styles.phoneLink}>
               +380 44 406 69 70
             </a>
           </div>
           
-          <div className="flex items-center w-8 justify-end">
+          <div className={styles.closeButtonContainer}>
             <button
-              className="text-white hover:text-red-500 transition-colors"
+              className={styles.closeButton}
               onClick={closeMenu}
               aria-label="Закрыть меню"
             >
@@ -66,13 +67,13 @@ export default function MobileMenu({ closeMenu }: MobileMenuProps) {
           </div>
         </div>
 
-        <nav className="flex-1 flex flex-col justify-center">
-          <ul className="space-y-6 text-center">
-            {navLinks.map(({ id, href, label }) => (
-              <li key={id}>
+        <nav className={styles.menuNavigation}>
+          <ul className={styles.menuList}>
+            {navLinks.map(({ id, href, label }, index) => (
+              <li key={id} className={styles.menuItem} style={{ transitionDelay: `${0.1 + index * 0.05}s` }}>
                 <Link
                   href={href}
-                  className="text-2xl text-white hover:text-red-500 transition-colors block py-2"
+                  className={styles.menuLink}
                   onClick={closeMenu}
                 >
                   {label}
@@ -82,9 +83,9 @@ export default function MobileMenu({ closeMenu }: MobileMenuProps) {
           </ul>
         </nav>
 
-        <div className="py-6 border-t border-gray-800 flex justify-center">
+        <div className={styles.menuFooter}>
           <button 
-            className="bg-white text-black px-6 py-3 hover:bg-red-600 hover:text-white transition-colors font-medium"
+            className={styles.consultButton}
             onClick={closeMenu}
           >
             ОТРИМАТИ КОНСУЛЬТАЦІЮ

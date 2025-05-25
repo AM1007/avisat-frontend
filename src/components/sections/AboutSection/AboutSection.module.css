@@ -1,0 +1,60 @@
+/* AboutSection.module.css */
+
+.aboutSection {
+  padding: 4rem 0; /* py-16 = 64px */
+  background-color: #ffffff; /* bg-white */
+}
+
+.container {
+  max-width: 1440px; /* или другое значение вашего контейнера */
+  margin: 0 auto; /* mx-auto */
+  padding: 0 1rem; /* px-4 = 16px */
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl = 30px */
+  line-height: 2.25rem;
+  text-align: center; /* text-center */
+  font-weight: 600; /* font-semibold */
+  color: #dc2626; /* text-red-600 */
+  margin-bottom: 2rem; /* mb-8 = 32px */
+}
+
+.contentWrapper {
+  max-width: 48rem; /* max-w-3xl = 768px */
+  margin: 0 auto; /* mx-auto */
+  text-align: center; /* text-center */
+}
+
+.paragraph {
+  margin-bottom: 1rem; /* mb-4 = 16px */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #171717; /* или ваш цвет текста */
+}
+
+.paragraph:last-child {
+  margin-bottom: 0; /* Убираем отступ у последнего параграфа */
+}
+
+.companyName {
+  font-weight: 700; /* font-bold */
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+  .aboutSection {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.25rem; /* Можно увеличить на больших экранах */
+    line-height: 2.5rem;
+  }
+}

@@ -1,138 +1,100 @@
-.header {
+.mobileHeader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-/* Мобильная версия хедера */
-.mobileHeader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: transparent;
-  display: block;
-  width: 100%;
 }
 
-@media (min-width: 768px) {
-  .mobileHeader {
+@media (min-width: 768px){
+  .mobileHeader{
     display: none;
   }
 }
 
-
-.mobileContainer {
+.mobileContainer{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  /* border: 1px solid green; */
 }
 
-.logo {
-  /* border: 1px solid red; */
-  display: flex;
-  align-self: flex-start;
-  margin-top: 10px;
-}
-
-@media (min-width: 768px) {
-.logo {
-  /* border: 1px solid red; */
-  display: flex;
-  align-self: center;
-  margin-top: 0;
-}
-}
 
 .flagButtonContainer{
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.flagMobile{
-  margin-bottom: 10px;
-}
-
-
-/* Десктопная версия хедера */
-.desktopHeader {
+.desktopHeader{
   display: none;
 }
 
-@media (min-width: 768px) {
-  .desktopHeader {
+@media (min-width: 768px){
+  .desktopHeader{
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     width: 100%;
+    padding: 0 24px;
+    border: 1px solid violet
+}
+}
+
+@media (min-width: 768px){
+  .desktopHeader{
+    padding: 0 40px;
   }
 }
 
-.logoMobileInDesktop {
-  display: block;
-}
-
-@media (min-width: 1440px) {
-  .logoMobileInDesktop {
-    display: none; /* Скрываем мобильный логотип */
+@media (min-width: 1440px){
+  .desktopHeader{
+    padding: 0 40px;
   }
 }
 
-.logoDesktop {
+
+.leftHeader{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  background-color: transparent;
+}
+
+.leftContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  /* border-right: 2px solid #ff0000; */
+}
+
+@media (min-width: 1440px){
+  .leftContent{
+    padding: 35px 0;
+  }
+}
+
+.logoDesktop{
   display: none;
 }
 
-@media (min-width: 1440px) {
-  .logoDesktop {
-    display: block; 
-    width: 213px;
+@media (min-width: 1440px){
+  .logoMobileInDesktop{
+    display: none;
   }
+  .logoDesktop{
+  display: block;
+}
 }
 
-/* Левая часть хедера (черная) */
-.leftHeader {
-  background-color: transparent;
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.leftContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 0 25px 20px;
-  width: 100%;
-  max-width: 720px;
-  border-right: 2px solid #ff0000;
-}
-
-/* Правая часть хедера (белая) */
-.rightHeader {
-
-  background-color:transparent;
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.rightContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 20px 25px 0;
-  width: 100%;
-  max-width: 720px; 
-  border-left: 2px solid #ff0000
-}
-
-/* Навигация */
 .leftNavigation, .rightNavigation {
   display: flex;
+  justify-content: space-between;
 }
 
 .navList {
@@ -140,16 +102,42 @@
 }
 
 .navLink {
-  transition: color 0.2s;
-  color: white;
-  text-decoration: none;
+  display: inline-flex;
   font-family: var(--font-strong), Arial, sans-serif;
+  text-decoration: none;
   font-size: 15px;
   position: relative;
-  padding: 3px 20px;
-  display: inline-flex;
+  padding: 20px 14px;
   align-items: center;
-  height: 40px;
+  color: white;
+  transition: color 0.2s;
+}
+
+@media (min-width: 768px){
+  .navLink{
+    font-size: 12px;
+    padding: 25px 20px;
+  }
+}
+
+@media (min-width: 1024px){
+  .navLink{
+    padding: 25px 20px;
+  }
+}
+
+@media (min-width: 1440px){
+  .navLink{
+    padding: 25px 20px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1920px){
+  .navLink{
+    padding: 25px 30px;
+    font-size: 20px;
+  }
 }
 
 .navLink:hover {
@@ -177,7 +165,26 @@
 
 .navLinkLight:not(:last-child)::after {
   background-color: #171717;
+} 
+
+/* Правый хедер */
+
+.rightHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  background-color:transparent;
 }
+
+.rightContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 960px; 
+  /* border-left: 2px solid #ff0000 */
+}
+
 
 /* Флаг и телефон */
 .flagDesktopContainer {
@@ -225,15 +232,16 @@ display: none;
   font-family: var(--font-nunito) ;
   font-size: 20px;
   padding: 16px 58px;
-  border: 1px solid red;
   display: block;
+  outline: 1px solid #ff0000;
   background-color: #ff0000;
   color: #F5F5F5;
   
 }
 }
 
-.headerRight {
+
+.flagPhoneContainer{
   display: flex;
   align-items: center;
 }

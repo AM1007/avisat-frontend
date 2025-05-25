@@ -1,22 +1,25 @@
+import Container from '@/components/ui/Container/Container';
+import styles from './AboutSection.module.css';
+
 export default function AboutSection() {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl text-center font-semibold text-red-600 mb-8">
+    <section className={styles.aboutSection}>
+      <Container>
+        <h2 className={styles.title}>
           ПРО КОМПАНІЮ
         </h2>
 
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="mb-4">
-            <span className="font-bold">АвіСат</span> - компанія з багаторічним
+        <div className={styles.contentWrapper}>
+          <p className={styles.paragraph}>
+            <span className={styles.companyName}>АвіСат</span> - компанія з багаторічним
             досвідом у сфері систем безпеки та автоматизації.
           </p>
-          <p>
+          <p className={styles.paragraph}>
             Ми проєктуємо комплексні мережі, підєднуємо до відеонагляду та
             забезпечуємо системи бізнес-звіт і навчаємо.
           </p>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

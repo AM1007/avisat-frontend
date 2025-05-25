@@ -125,7 +125,7 @@
 
 
 .leftHeroContent{
-  /* border: 1px solid wheat; */
+  border: 1px solid wheat;
   padding-top: 202px;
   padding-bottom: 17px;
 }
@@ -137,11 +137,17 @@
  }
 }
 
+@media (min-width: 768px){
+ .leftHeroContent{
+  padding-top: 322px;
+  padding-bottom: 42px;
+ }
+}
+
 @media (min-width: 1024px){
  .leftHeroContent{
   padding-top: 400px;
-  padding-bottom: 34px;
-  
+  padding-bottom: 69px;
  }
 }
 
@@ -169,11 +175,19 @@
   margin-bottom: 13px;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
 .heroTitle{
   margin-left: 0;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+}
+
+
+
+@media (min-width: 1024px){
+.heroTitle{
   margin-bottom: 35px;
-  font-size: 60px;
   line-height: 1.5;
 }
 }
@@ -183,7 +197,6 @@
 .heroTitle{
   margin-left: 0;
   margin-bottom: 35px;
-  font-size: 60px;
   line-height: 1.5;
 }
 }
@@ -191,7 +204,6 @@
 
 .titleLarge{
   font-size: 20px;
-
 }
 
 @media (min-width: 480px){
@@ -213,7 +225,6 @@
   line-height: 0.75;
 }
 }
-
 
 @media (min-width: 1920px){
 .titleLarge{
@@ -261,6 +272,13 @@
 .ctaButton{
   font-size: 12px;
   padding: 8px 10px 8px 80px;
+}
+}
+
+@media (min-width: 760px){
+.ctaButton{
+  font-size: 10px;
+  padding: 8px 10px ;
 }
 }
 

@@ -113,6 +113,13 @@
   transition: color 0.2s;
 }
 
+@media (min-width: 768px){
+  .navLink{
+    font-size: 12px;
+    padding: 25px 20px;
+  }
+}
+
 @media (min-width: 1024px){
   .navLink{
     padding: 25px 20px;

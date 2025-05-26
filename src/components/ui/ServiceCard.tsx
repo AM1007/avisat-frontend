@@ -1,7 +1,13 @@
 import Image from "next/image";
 // import Link from "next/link";
 
-export default function ServiceCard({ title, description, image }) {
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+export default function ServiceCard({ title, description, image }: ServiceCardProps) {
   return (
     <div className="bg-white shadow hover:shadow-lg transition-shadow group">
       <div className="relative h-48 overflow-hidden">

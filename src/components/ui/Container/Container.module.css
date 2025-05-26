@@ -9,6 +9,7 @@
   border: 1px solid green;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 /* s - 375px малі телефони */

@@ -8,11 +8,14 @@ import styles from './MobileMenu.module.css';
 
 interface MobileMenuProps {
   closeMenu: () => void;
-  isOpen?: boolean; // Делаем свойство необязательным, добавляя знак вопроса
+  isOpen?: boolean;
 }
 
 export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
   useEffect(() => {
+    // Только выполняем действия если меню открыто
+    if (!isOpen) return;
+
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         closeMenu();
@@ -21,14 +24,15 @@ export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
 
     document.addEventListener("keydown", handleEscape);
 
-    // Блокируем прокрутку страницы при открытом меню
+    // Блокируем прокрутку страницы ТОЛЬКО при открытом меню
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
+      // Возвращаем прокрутку при закрытии
       document.body.style.overflow = "auto";
     };
-  }, [closeMenu]);
+  }, [closeMenu, isOpen]); // Добавляем isOpen в зависимости
 
   return (
     <div className={`${styles.mobileMenuOverlay} ${isOpen ? styles.open : ''}`}>

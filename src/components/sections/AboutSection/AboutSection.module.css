@@ -1,60 +1,86 @@
-/* AboutSection.module.css */
-
 .aboutSection {
-  padding: 4rem 0; /* py-16 = 64px */
-  background-color: #ffffff; /* bg-white */
+  position: relative;
+  padding-top: 13px;
 }
 
-.container {
-  max-width: 1440px; /* или другое значение вашего контейнера */
-  margin: 0 auto; /* mx-auto */
-  padding: 0 1rem; /* px-4 = 16px */
+@media (min-width: 768px){
+  .aboutSection {
+    margin: 0 auto;
+    z-index: -20;
+}
 }
 
-.title {
-  font-size: 1.875rem; /* text-3xl = 30px */
-  line-height: 2.25rem;
-  text-align: center; /* text-center */
-  font-weight: 600; /* font-semibold */
-  color: #dc2626; /* text-red-600 */
-  margin-bottom: 2rem; /* mb-8 = 32px */
+@media (min-width: 1440px){
+  .aboutSection {
+      z-index: -20;
+      width: 1000px;
+}
+}
+
+@media (min-width: 1440px){
+  .aboutSectionContent{
+    width: 800px;
+}
 }
 
 .contentWrapper {
-  max-width: 48rem; /* max-w-3xl = 768px */
-  margin: 0 auto; /* mx-auto */
-  text-align: center; /* text-center */
+  max-width: 375px; 
+  margin: 0 auto; 
+  text-align: center; 
+  border: 1px solid green;
 }
+
+@media (min-width: 1440px){
+.contentWrapper{
+  max-width: 800px;
+}
+}
+
+.title {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center; 
+  font-weight: 300;
+  padding: 8px 0;
+  color: #dc2626;
+
+}
+
+@media (min-width: 1440px){
+  .title {
+  font-size: 57px;
+}
+}
+
+.paragraphSelection{
+  color: #FF0000;
+}
+
 
 .paragraph {
-  margin-bottom: 1rem; /* mb-4 = 16px */
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #171717; /* или ваш цвет текста */
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-weight: 300;
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 15px;
+  color: #171717; 
+  max-width: 310px; 
+  margin: 0 auto;
+  border: 1px solid red;
 }
 
-.paragraph:last-child {
-  margin-bottom: 0; /* Убираем отступ у последнего параграфа */
+.paragraph:first-child {
+  max-width: 180px; 
+  margin: 0 auto;
 }
 
-.companyName {
-  font-weight: 700; /* font-bold */
+@media (min-width: 1440px){
+  .paragraph {
+  max-width: 1440px;
 }
 
-/* Адаптивность */
-@media (min-width: 768px) {
-  .aboutSection {
-    padding: 4rem 0;
-  }
-  
-  .container {
-    padding: 0 2rem;
-  }
+.paragraph:first-child {
+  max-width: 1440px; 
+  margin: 0 auto;
 }
-
-@media (min-width: 1024px) {
-  .title {
-    font-size: 2.25rem; /* Можно увеличить на больших экранах */
-    line-height: 2.5rem;
-  }
 }

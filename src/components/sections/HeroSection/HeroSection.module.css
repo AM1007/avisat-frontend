@@ -7,7 +7,7 @@
   height: 320px;
   background-color: #000000;
   z-index: -10;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 @media (min-width: 480px){
@@ -20,7 +20,7 @@
   .heroSection {
     background-color: transparent; 
     box-shadow: 0px 50px 50px -50px rgba(0, 0, 0, 0.25);
-    height: 467px;
+    height: 468px;
   }
 
   .heroSection::before {
@@ -49,7 +49,7 @@
 @media (min-width: 1024px){
   .heroSection {
     background-color: transparent; 
-    height: 623px;
+    height: 620px;
   }
 
 }
@@ -57,14 +57,14 @@
 @media (min-width: 1440px){
   .heroSection {
     background-color: transparent; 
-    height: 876px;
+    height: 873px;
   }
 }
 
 @media (min-width: 1920px){
   .heroSection {
     background-color: transparent; 
-    height: 1166px;
+    height: 1162px;
   }
 }
 
@@ -96,7 +96,7 @@
     width: 50%;
     background-position: 0 70px;
     border-right: 2px solid #FF0000;
-    height:464px;
+    height:468px;
   }
 }
 
@@ -125,7 +125,7 @@
 
 
 .leftHeroContent{
-  border: 1px solid wheat;
+  /* border: 1px solid wheat; */
   padding-top: 202px;
   padding-bottom: 17px;
 }
@@ -316,9 +316,9 @@
   background-image: url('/images/HeroDesktopRight.png');
   background-repeat: no-repeat;
   background-size: 120%;
-  background-position: 0 2px;
+  background-position: 0 3px;
   border-left: 2px solid #FF0000; 
-  height:464px;
+  height:468px;
   margin-right: -24px;
 }
 }
@@ -344,5 +344,6 @@
   height:1161px;
   width: calc(50% + 45px);
   margin-right: -45px;
+  background-position: 0 4px;
 }
 }

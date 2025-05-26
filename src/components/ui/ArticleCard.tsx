@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ArticleCard({ title, image, url }) {
+interface ArticleCardProps {
+  title: string;
+  image: string;
+  url: string;
+}
+
+export default function ArticleCard({ title, image, url }: ArticleCardProps) {
   return (
     <div className="group">
       <div className="relative h-64 overflow-hidden">

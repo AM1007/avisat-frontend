@@ -1,6 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection/HeroSection";
 import AboutSection from "@/components/sections/AboutSection/AboutSection";
-import ServicesSection from "@/components/sections/ServicesSection";
+import ServicesSection from "@/components/sections/ServicesSection/ServicesSection";
 // import ArticlesSection from "@/components/sections/ArticlesSection";
 // import ContactSection from "@/components/sections/ContactSection";
 import Header from "@/components/layout/Header/Header";

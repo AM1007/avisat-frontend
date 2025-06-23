@@ -4,15 +4,19 @@
 import Script from 'next/script';
 import { useEffect } from 'react';
 
-interface SendPulseFormProps {
-  onLoad?: () => void;
-  onError?: (error: Error | Event) => void;
-}
-
-export default function SendPulseForm({ onLoad, onError }: SendPulseFormProps) {
+export default function SendPulseForm() {
   useEffect(() => {
     // Можно добавить логику инициализации если нужно
   }, []);
+
+  // Обработчики определяем внутри компонента
+  const handleLoad = () => {
+    console.log('SendPulse форма успешно загружена');
+  };
+
+  const handleError = (error: Error | Event) => {
+    console.error('Ошибка загрузки SendPulse формы:', error);
+  };
 
   return (
     <>
@@ -184,8 +188,8 @@ export default function SendPulseForm({ onLoad, onError }: SendPulseFormProps) {
       <Script
         src="https://web.webformscr.com/apps/fc3/build/default-handler.js"
         strategy="afterInteractive"
-        onLoad={onLoad}
-        onError={onError}
+        onLoad={handleLoad}
+        onError={handleError}
       />
     </>
   );

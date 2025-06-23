@@ -69,13 +69,28 @@ export default function SendPulseForm() {
         `}
       </Script>
 
-      {/* SendPulse - используем loader.js как в оригинале */}
+      {/* Добавляем HTML-тег скрипта после Script компонента */}
+      <Script id="sendpulse-manual" strategy="afterInteractive">
+        {`
+          // Создаем script элемент вручную
+          setTimeout(function() {
+            var script = document.createElement('script');
+            script.src = 'https://web.webformscr.com/apps/fc3/build/loader.js';
+            script.setAttribute('sp-form-id', '6867f3e01d57b60bdaf1a84e70d521c87a2633216a80370c44aad80a05bff4fc');
+            script.async = true;
+            document.body.appendChild(script);
+            console.log('Manual script добавлен');
+          }, 1000);
+        `}
+      </Script>
+
+      {/* SendPulse - пробуем без кастомных атрибутов */}
       <Script
+        id="sendpulse-loader"
         src="https://web.webformscr.com/apps/fc3/build/loader.js"
         strategy="afterInteractive"
         onLoad={handleLoad}
         onError={handleError}
-        {...{ 'sp-form-id': '6867f3e01d57b60bdaf1a84e70d521c87a2633216a80370c44aad80a05bff4fc' }}
       />
     </>
   );

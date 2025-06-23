@@ -12,6 +12,21 @@ export default function SendPulseForm() {
   // Обработчики определяем внутри компонента
   const handleLoad = () => {
     console.log('SendPulse форма успешно загружена');
+    
+    // Добавляем отладку
+    setTimeout(() => {
+      const form = document.getElementById('sp-form-247350');
+      const container = document.querySelector('.sp-form-outer');
+      
+      console.log('Форма найдена:', !!form);
+      console.log('Контейнер найден:', !!container);
+      console.log('SPFormApi доступен:', !!window.SPFormApi);
+      
+      if (container) {
+        console.log('Классы контейнера:', container.className);
+        console.log('Стили контейнера:', window.getComputedStyle(container).display);
+      }
+    }, 1000);
   };
 
   const handleError = (error: Error | Event) => {
@@ -23,7 +38,11 @@ export default function SendPulseForm() {
       {/* Обновленные стили формы */}
       <style jsx>{`
         .sp-force-hide { 
-          display: block !important;
+          display: block !important; /* Временно показываем форму */
+          position: fixed !important;
+          bottom: 20px !important;
+          right: 20px !important;
+          z-index: 9999 !important;
         }
         .sp-form[sp-id="247350"] { 
           display: block; 
@@ -177,6 +196,30 @@ export default function SendPulseForm() {
           </div>
         </div>
       </div>
+
+      {/* Принудительная инициализация формы */}
+      <Script id="sendpulse-force-init" strategy="afterInteractive">
+        {`
+          setTimeout(function() {
+            try {
+              // Убираем класс sp-force-hide принудительно
+              var formOuter = document.querySelector('.sp-form-outer');
+              if (formOuter) {
+                formOuter.classList.remove('sp-force-hide');
+                console.log('Класс sp-force-hide удален');
+              }
+              
+              // Пытаемся инициализировать форму если API доступен
+              if (window.SPFormApi?.show) {
+                window.SPFormApi.show('247350');
+                console.log('Форма принудительно показана');
+              }
+            } catch (e) {
+              console.error('Ошибка инициализации формы:', e);
+            }
+          }, 2000);
+        `}
+      </Script>
 
       {/* SendPulse обработчик с правильным URL и версией */}
       <Script

@@ -19,6 +19,13 @@ export default function Home() {
         <ContactSection /> */}
       </main>
 
+      <script
+        src="https://web.webformscr.com/apps/fc3/build/loader.js"
+        strategy="afterInteractive"            
+        async                                      
+        dataSpFormId="6867f3e01d57b60bdaf1a84e70d521c87a2633216a80370c44aad80a05bff4fc"  // 🔑 CamelCase замість "data-sp-form-id"
+      />
+          
       {/* <Footer /> */}
     </div>
   );

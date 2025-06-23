@@ -18,6 +18,12 @@
     │   ├── LogoDesktop.svg
     │   └── LogoMobile.svg
     └── images
+    │   ├── 01_service-security.png
+    │   ├── 02_service-video.png
+    │   ├── 03_service-perimeter.png
+    │   ├── 04_service-smart-home.png
+    │   ├── 05_service-fire.png
+    │   ├── 06_service-monitoring.png
     │   ├── HeroDesktopLeft.png
     │   └── HeroDesktopRight.png
 ├── src
@@ -45,7 +51,9 @@
     │   │   ├── HeroSection
     │   │   │   ├── HeroSection.module.css
     │   │   │   └── HeroSection.tsx
-    │   │   └── ServicesSection.tsx
+    │   │   └── ServicesSection
+    │   │   │   ├── ServicesSection.module.css
+    │   │   │   └── ServicesSection.tsx
     │   └── ui
     │   │   ├── ArticleCard.tsx
     │   │   ├── Button.tsx
@@ -54,9 +62,12 @@
     │   │       ├── Container.module.css
     │   │       └── Container.tsx
     │   │   ├── MobileMenuButton.tsx
-    │   │   └── ServiceCard.tsx
+    │   │   └── ServiceCard
+    │   │       ├── ServiceCard.module.css
+    │   │       └── ServiceCard.tsx
     ├── data
-    │   └── dataLinks.ts
+    │   ├── dataLinks.ts
+    │   └── servicesLinks.ts
     ├── fonts
     │   └── index.js
     └── styles

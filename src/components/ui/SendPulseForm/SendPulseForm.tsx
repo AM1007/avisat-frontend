@@ -20,10 +20,10 @@ export default function SendPulseForm() {
 
   return (
     <>
-      {/* Стили формы */}
+      {/* Обновленные стили формы */}
       <style jsx>{`
         .sp-force-hide { 
-          display: none;
+          display: block !important;
         }
         .sp-form[sp-id="247350"] { 
           display: block; 
@@ -84,25 +84,19 @@ export default function SendPulseForm() {
           text-align: left; 
           width: auto;
         }
-        .sp-popup-outer { 
-          background: rgba(0, 0, 0, 0.5);
-        }
       `}</style>
 
-      {/* HTML форма */}
-      <div 
-        className="sp-form-outer sp-popup-outer sp-force-hide" 
-        style={{background: 'rgba(0, 0, 0, 0.5)'}}
-      >
+      {/* Обновленная HTML форма - теперь fixed вместо popup */}
+      <div className="sp-form-outer sp-fixed-outer sp-force-hide">
         <div 
           id="sp-form-247350" 
           {...{
             'sp-id': '247350',
             'sp-hash': '6867f3e01d57b60bdaf1a84e70d521c87a2633216a80370c44aad80a05bff4fc',
             'sp-lang': 'ua',
-            'sp-show-options': '%7B%22satellite%22%3Afalse%2C%22maDomain%22%3A%22login.sendpulse.com%22%2C%22formsDomain%22%3A%22forms.sendpulse.com%22%2C%22condition%22%3A%22onEnter%22%2C%22scrollTo%22%3A25%2C%22delay%22%3A5%2C%22repeat%22%3A3%2C%22background%22%3A%22rgba(0%2C%200%2C%200%2C%200.5)%22%2C%22position%22%3A%22bottom-right%22%2C%22animation%22%3A%22%22%2C%22hideOnMobile%22%3Afalse%2C%22submitRedirectUrl%22%3A%22%22%2C%22urlFilter%22%3Afalse%2C%22urlFilterConditions%22%3A%5B%7B%22force%22%3A%22hide%22%2C%22clause%22%3A%22contains%22%2C%22token%22%3A%22%22%7D%5D%2C%22analytics%22%3A%7B%22ga%22%3A%7B%22eventLabel%22%3A%22%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%BF_%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D0%9D%D0%BE%D0%B2_%D0%BF_%D0%B4%D0%BF%D0%B8%D1%81%D0%BD%D0%B8%D0%BA%D0%B8%22%2C%22send%22%3Afalse%7D%7D%2C%22utmEnable%22%3Afalse%7D'
+            'sp-show-options': '%7B%22satellite%22%3Afalse%2C%22maDomain%22%3A%22login.sendpulse.com%22%2C%22formsDomain%22%3A%22forms.sendpulse.com%22%2C%22condition%22%3A%22onEnter%22%2C%22scrollTo%22%3A25%2C%22delay%22%3A5%2C%22repeat%22%3A1%2C%22background%22%3A%22rgba(0%2C%200%2C%200%2C%200.5)%22%2C%22position%22%3A%22bottom-right%22%2C%22animation%22%3A%22%22%2C%22hideOnMobile%22%3Afalse%2C%22submitRedirectUrl%22%3A%22%22%2C%22urlFilter%22%3Afalse%2C%22urlFilterConditions%22%3A%5B%7B%22force%22%3A%22hide%22%2C%22clause%22%3A%22contains%22%2C%22token%22%3A%22%22%7D%5D%2C%22analytics%22%3A%7B%22ga%22%3A%7B%22eventLabel%22%3A%22%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%BF_%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D0%9D%D0%BE%D0%B2_%D0%BF_%D0%B4%D0%BF%D0%B8%D1%81%D0%BD%D0%B8%D0%BA%D0%B8%22%2C%22send%22%3Afalse%7D%7D%2C%22utmEnable%22%3Afalse%7D'
           }}
-          className="sp-form sp-form-regular sp-form-popup"
+          className="sp-form sp-form-regular sp-form-fixed sp-form-fixed__bottom-right"
         >
           <div className="sp-form-fields-wrapper">
             <button className="sp-btn-close">&nbsp;</button>
@@ -184,9 +178,9 @@ export default function SendPulseForm() {
         </div>
       </div>
 
-      {/* SendPulse обработчик */}
+      {/* SendPulse обработчик с правильным URL и версией */}
       <Script
-        src="https://web.webformscr.com/apps/fc3/build/default-handler.js"
+        src="https://web.webformscr.com/apps/fc3/build/default-handler.js?1744699503990"
         strategy="afterInteractive"
         onLoad={handleLoad}
         onError={handleError}

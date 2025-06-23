@@ -1,8 +1,9 @@
+// src/app/page.tsx
+import Script from 'next/script';
 import HeroSection from "@/components/sections/HeroSection/HeroSection";
 import AboutSection from "@/components/sections/AboutSection/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection/ServicesSection";
 import Header from "@/components/layout/Header/Header";
-import SendPulseForm from "@/components/ui/SendPulseForm/SendPulseForm";
 
 export default function Home() {
   return (
@@ -15,8 +16,12 @@ export default function Home() {
         <ServicesSection />
       </main>
 
-      {/* SendPulse форма подписки */}
-      <SendPulseForm />
+      {/* SendPulse форма - простая интеграция */}
+      <Script
+        src="https://web.webformscr.com/apps/fc3/build/loader.js"
+        strategy="afterInteractive"
+        {...{ 'sp-form-id': '6867f3e01d57b60bdaf1a84e70d521c87a2633216a80370c44aad80a05bff4fc' }}
+      />
     </div>
   );
 }

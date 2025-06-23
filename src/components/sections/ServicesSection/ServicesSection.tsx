@@ -1,5 +1,5 @@
 import ServiceCard from "../../ui/ServiceCard/ServiceCard";
-import servicesLinks from "../../../data/servicesLinks.ts"
+import servicesLinks from "../../../data/servicesLinks"
 
 
 export default function ServicesSection() {

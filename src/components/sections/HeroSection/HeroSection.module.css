@@ -57,7 +57,7 @@
 @media (min-width: 1440px){
   .heroSection {
     background-color: transparent; 
-    height: 873px;
+    height: 875px;
   }
 }
 
@@ -333,7 +333,7 @@
 
 @media (min-width: 1440px){
   .rightHero{
-  height:873px;
+  height:875px;
   width: calc(50% + 40px);
   margin-right: -40px;
 }

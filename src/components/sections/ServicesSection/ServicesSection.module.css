@@ -3,8 +3,7 @@
 }
 
 .servicesWrapper{
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 .servicesTitle {
@@ -12,12 +11,9 @@
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
-  
   text-align: center;
   color: #050505; 
-
-  line-height: 1.2;
-  
+  line-height: 1.5;
 }
 
 /* Планшеты */
@@ -42,7 +38,51 @@
 }
 
 
-.servicesCardWrapper{
+/* Mobile First: 375px и 480px - 1 карточка в ряд */
+/* По умолчанию grid-template-columns: 1fr; */
+.servicesCardWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
   border: 1px solid red;
+  margin: 0 -20px 0 -20px;
+  gap: 10px;
 }
 
+@media (min-width: 768px){
+  .servicesCardWrapper{
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 768px;
+  }
+}
+
+
+/* lg - 1024px: планшети в ландшафті - 3 карточки в ряд */
+@media (min-width: 1024px) {
+  .servicesCardWrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;
+    max-width: 1024px;
+  }
+}
+
+/* xl - 1440px: стандартні десктопи - остается 3 карточки */
+@media (min-width: 1440px) {
+  .servicesCardWrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 35px;
+    max-width: 1440px;
+  }
+}
+
+/* xxl - 1920px: великі монітори - остается 3 карточки */
+@media (min-width: 1920px) {
+  .servicesCardWrapper {
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 40px;
+    max-width: 1920px;
+  }
+}

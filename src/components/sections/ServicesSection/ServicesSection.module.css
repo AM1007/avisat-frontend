@@ -1,0 +1,48 @@
+.servicesSection{
+  padding-top: 10px;
+}
+
+.servicesWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesTitle {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  
+  text-align: center;
+  color: #050505; 
+
+  line-height: 1.2;
+  
+}
+
+/* Планшеты */
+@media (min-width: 768px) {
+  .servicesTitle {
+    font-size: 32px;
+  }
+}
+
+/* Десктопы */
+@media (min-width: 1024px) {
+  .servicesTitle {
+    font-size: 36px;
+  }
+}
+
+/* Большие экраны */
+@media (min-width: 1440px) {
+  .servicesTitle {
+    font-size: 42px;
+  }
+}
+
+
+.servicesCardWrapper{
+  border: 1px solid red;
+}
+

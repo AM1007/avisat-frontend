@@ -13,19 +13,15 @@ export default function ServicesSection() {
 
           <div className={styles.servicesCardWrapper}>
               {servicesLinks.map((service) => {
-              // Отладка: логируем каждый рендер
-              console.log(`Rendering service with ID: ${service.id}`);
-              
               return (
                 <ServiceCard
-                  key={service.id}  // ✅ Привязка к ID (уникальный ключ)
+                  key={service.id}
                   title={service.title}
                   description={service.description}
                   image={service.image}
                 />
               );
             })}
-            
           </div>
         </div>
 

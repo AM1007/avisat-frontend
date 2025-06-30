@@ -16,8 +16,10 @@ export default function AboutSection() {
             досвідом у сфері систем безпеки та автоматизації.
           </p>
           <p className={styles.paragraph}>
-            Ми пропунуємо комплексний підхід: <span className={styles.paragraphSelection}>від проєктування до впровадження </span> 
-та обслуговування систем будь-якої складності 
+            Ми пропунуємо комплексний підхід:
+          </p>
+          <p className={styles.paragraph}>
+            <span className={styles.paragraphSelection}>від проєктування до впровадження та обслуговування </span> систем будь-якої складності 
           </p>
         </div>
         </div>

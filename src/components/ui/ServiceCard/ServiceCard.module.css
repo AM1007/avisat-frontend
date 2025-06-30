@@ -48,9 +48,22 @@
 }
 
 .cardContent{
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   padding: 8px 0;
 }
+
+@media (min-width: 768px) {
+.cardContent{
+height: 80px;
+}
+}
+
+@media (min-width: 768px) {
+.cardContent{
+height: 80px;
+}
+}
+
 
 .imageTitle{
   font-family: var(--font-nunito), Arial, sans-serif;
@@ -64,15 +77,47 @@
 
 @media (min-width: 768px) {
   .imageTitle {
-    font-size: 14px;
+    font-size: 18px;
+  }
+  
+  /* Четные карточки - выравнивание по правому краю */
+  .serviceCard:nth-child(even) .imageTitle {
+    text-align: left;
+  }
+  
+  /* Нечетные карточки - выравнивание по левому краю */
+  .serviceCard:nth-child(odd) .imageTitle {
+    text-align: right;
   }
 }
 
 @media (min-width: 1024px) {
   .imageTitle {
-    font-size: 16px;
+    font-size: 17px;
+  }
+
+    /* Четные карточки - выравнивание по правому краю */
+  .serviceCard:nth-child(even) .imageTitle {
+    text-align: center
+  }
+  
+  /* Нечетные карточки - выравнивание по левому краю */
+  .serviceCard:nth-child(odd) .imageTitle {
+    text-align: center;
   }
 }
+
+@media (min-width: 1024px) {
+  .imageTitle {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1440px) {
+  .imageTitle {
+    font-size: 23px;
+  }
+}
+
 
 
 .cardDescription{
@@ -85,20 +130,56 @@
   text-align: center;
 }
 
+@media (min-width: 480px) {
+  .cardDescription {
+    font-size: 16px;
+  }
+}
+
+
 @media (min-width: 768px) {
   .cardDescription {
-    font-size: 11px;
+    font-size: 14px;
   }
+
+    /* Четные карточки - выравнивание по правому краю */
+  .serviceCard:nth-child(even) .cardDescription {
+    text-align: left;
+  }
+  
+  /* Нечетные карточки - выравнивание по левому краю */
+  .serviceCard:nth-child(odd) .cardDescription {
+    text-align: right;
+  }
+
+
+
 }
 
 @media (min-width: 1024px) {
   .cardDescription {
     font-size: 12px;
+    text-align: center;
+  }
+
+      /* Четные карточки - выравнивание по правому краю */
+  .serviceCard:nth-child(even) .cardDescription {
+    text-align: center;
+  }
+  
+  /* Нечетные карточки - выравнивание по левому краю */
+  .serviceCard:nth-child(odd) .cardDescription {
+    text-align: center;
   }
 }
 
 @media (min-width: 1440px) {
   .cardDescription {
-    font-size: 14px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1920px) {
+  .cardDescription {
+    font-size: 19px;
   }
 }

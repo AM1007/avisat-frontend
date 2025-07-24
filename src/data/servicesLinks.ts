@@ -1,5 +1,4 @@
-// src/data/servicesLinks.ts
-export const servicesLinks = [
+const servicesLinks = [
   {
     id: 1,
     title: "ОХОРОННА СИГНАЛІЗАЦІЯ",

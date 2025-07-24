@@ -1,0 +1,63 @@
+/* ArticlesSection.module.css */
+.articlesSection {
+ background-color: var(--foreground);
+  
+}
+
+/* @media (min-width: 768px) {
+  .articlesSection {
+    padding-top: 40px;
+  }
+} */
+
+.ArticlesContainer {
+  border: 1px solid red;
+  width: 100%;
+  margin: 0 -20px;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.ArticlesTitle {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: #050505; 
+  line-height: 1.5;
+  padding: 14px 0;
+}
+
+/* Планшеты */
+@media (min-width: 768px) {
+  .ArticlesTitle {
+    font-size: 32px;
+  }
+}
+
+/* Десктопы */
+@media (min-width: 1024px) {
+  .ArticlesTitle {
+    font-size: 36px;
+    padding: 17px 0;
+  }
+}
+
+/* Большие экраны */
+@media (min-width: 1440px) {
+  .ArticlesTitle {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .ArticlesTitle {
+    font-size: 60px;
+    padding: 28px 0;
+  }
+}

@@ -1,0 +1,55 @@
+/* Mobile first стили для слайдера */
+.swiperContainer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 50px; /* Место для пагинации */
+}
+
+.swiperFallback {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .swiperFallback {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Кастомизация навигации Swiper */
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.swiperContainer :global(.swiper-button-next):after,
+.swiperContainer :global(.swiper-button-prev):after {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .swiperContainer :global(.swiper-button-next),
+  .swiperContainer :global(.swiper-button-prev) {
+    display: none; /* Скрываем на мобильных */
+  }
+}
+
+/* Кастомизация пагинации */
+.swiperContainer :global(.swiper-pagination-bullet) {
+  background: #ccc;
+  opacity: 0.5;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet-active) {
+  background: #FF0000;
+  opacity: 1;
+}
+
+.swiperContainer :global(.swiper-pagination) {
+  bottom: 10px;
+}

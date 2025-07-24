@@ -42,8 +42,8 @@ export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
             <Image
               src="/icons/FlagMobile.svg"
               alt="Український прапор"
-              width={20}
-              height={16}
+              width={16}
+              height={20}
               className="object-contain transform -rotate-90"
             />
           </div>

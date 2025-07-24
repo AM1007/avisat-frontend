@@ -9,8 +9,6 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ title, description, image }: ServiceCardProps) {
-   // Отладка: проверяем получаемые пропсы
-  console.log('ServiceCard props:', { title, image });
   return (
       <div className={styles.serviceCard}>
         <div className={styles.imageContainer}>
@@ -18,6 +16,7 @@ export default function ServiceCard({ title, description, image }: ServiceCardPr
              src={image}
              alt={title}
              fill
+             sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) calc(50vw - 32px), calc(33vw - 27px)"
              className={styles.serviceImage}   
           />
         </div>

@@ -14,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} ${strong.variable} antialiased`}>
+      <body 
+        className={`${nunito.variable} ${strong.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>

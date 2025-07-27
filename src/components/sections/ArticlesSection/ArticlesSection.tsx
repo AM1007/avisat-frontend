@@ -11,7 +11,7 @@ export default function ArticlesSection() {
         Статті
       </h2>
     <section className={styles.articlesSection}>
-      <Container>        
+      <Container noGutter>        
         <div className={styles.ArticlesContainer}>
         <SwiperComponent/>
       </div>

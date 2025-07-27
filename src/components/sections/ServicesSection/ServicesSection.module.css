@@ -64,7 +64,8 @@
 
 @media (min-width: 768px){
   .servicesCardWrapper{
-    margin: 0 auto;
+    
+    margin: 0 -24px 0 -24px;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     max-width: 768px;
@@ -75,9 +76,11 @@
 /* lg - 1024px: планшети в ландшафті - 3 карточки в ряд */
 @media (min-width: 1024px) {
   .servicesCardWrapper {
+    margin: 0 -32px 0 -32px;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 30px;
     max-width: 1024px;
+   
   }
 }
 

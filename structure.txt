@@ -24,6 +24,8 @@
     │   ├── 04_service-smart-home.png
     │   ├── 05_service-fire.png
     │   ├── 06_service-monitoring.png
+    │   ├── 07_article.png
+    │   ├── 08_article.png
     │   ├── HeroDesktopLeft.png
     │   └── HeroDesktopRight.png
 ├── src
@@ -46,7 +48,9 @@
     │   │   ├── AboutSection
     │   │   │   ├── AboutSection.module.css
     │   │   │   └── AboutSection.tsx
-    │   │   ├── ArticlesSection.tsx
+    │   │   ├── ArticlesSection
+    │   │   │   ├── ArticlesSection.module.css
+    │   │   │   └── ArticlesSection.tsx
     │   │   ├── ContactSection.tsx
     │   │   ├── HeroSection
     │   │   │   ├── HeroSection.module.css
@@ -55,17 +59,23 @@
     │   │   │   ├── ServicesSection.module.css
     │   │   │   └── ServicesSection.tsx
     │   └── ui
-    │   │   ├── ArticleCard.tsx
+    │   │   ├── ArticleCard
+    │   │       ├── ArticleCard.module.css
+    │   │       └── ArticleCard.tsx
     │   │   ├── Button.tsx
     │   │   ├── ContactForm.tsx
     │   │   ├── Container
     │   │       ├── Container.module.css
     │   │       └── Container.tsx
     │   │   ├── MobileMenuButton.tsx
-    │   │   └── ServiceCard
+    │   │   ├── ServiceCard
     │   │       ├── ServiceCard.module.css
     │   │       └── ServiceCard.tsx
+    │   │   └── Swiper
+    │   │       ├── SwiperComponent.jsx
+    │   │       └── SwiperComponent.module.css
     ├── data
+    │   ├── articleLinks.ts
     │   ├── dataLinks.ts
     │   └── servicesLinks.ts
     ├── fonts

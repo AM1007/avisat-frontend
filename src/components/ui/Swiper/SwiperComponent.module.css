@@ -3,8 +3,22 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding-bottom: 50px; /* Место для пагинации */
+  padding-bottom: 50px; 
 }
+
+@media (min-width: 1024px) {
+.swiperContainer {
+  width: 80%;
+  
+}
+}
+
+@media (min-width: 1440px) {
+.swiperContainer {
+  width: 70%;
+}
+}
+
 
 .swiperFallback {
   display: grid;
@@ -20,24 +34,57 @@
   }
 }
 
+/* Все слайды одинаковой высоты */
+.swiperContainer :global(.swiper-slide) {
+  height: auto;
+  display: flex; /* Важно! */
+}
+
+
+
+
+
+
 /* Кастомизация навигации Swiper */
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+  top: var(--swiper-navigation-top-offset, 40%);
+    color: #FF0000;
+  text-shadow: 
+    0 0 3px #000,
+    0 0 6px #000,
+    0 0 9px #000;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.swiperContainer :global(.swiper-button-next):after,
+.swiperContainer :global(.swiper-button-prev):after {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+@media (min-width: 1920px) {
 .swiperContainer :global(.swiper-button-next),
 .swiperContainer :global(.swiper-button-prev) {
   color: #FF0000;
   font-weight: bold;
+  top: var(--swiper-navigation-top-offset, 43%);
+  
 }
+}
+
 
 .swiperContainer :global(.swiper-button-next):after,
 .swiperContainer :global(.swiper-button-prev):after {
   font-size: 20px;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .swiperContainer :global(.swiper-button-next),
   .swiperContainer :global(.swiper-button-prev) {
-    display: none; /* Скрываем на мобильных */
+    display: none;
   }
-}
+} */
 
 /* Кастомизация пагинации */
 .swiperContainer :global(.swiper-pagination-bullet) {

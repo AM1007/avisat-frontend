@@ -48,7 +48,7 @@
 } */
 
 .ArticlesContainer {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   margin: 0;
 }
@@ -60,3 +60,24 @@
   }
 } */
 
+.swiperLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #666;
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .swiperLoading {
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiperLoading {
+    min-height: 400px;
+  }
+}

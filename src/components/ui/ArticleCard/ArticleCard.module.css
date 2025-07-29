@@ -8,7 +8,7 @@
 .articleCard {
   cursor: pointer;
   transition: transform 0.3s ease;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: center;
   padding: 15px 0 5px;
-  border: 1px solid green;
+  /*  border: 1px solid green; */
   /* min-height: 90px; */
   
 }
@@ -139,12 +139,13 @@
   text-align: center;
   font-size: 16px;
   transition: transform 0.3s ease;
+  transition: text-align 0.4s ease-in-out, transform 0.4s ease-in-out;
   color: #FF0000;
 }
 
 .articleCard:hover .titleLink{
   color: #dc2626;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 
@@ -197,5 +198,105 @@
   .button {
     padding: 1.125rem 2.25rem;
     font-size: 1.0625rem;
+  }
+}
+
+
+/* анимация текста */
+
+
+
+
+/* Keyframes для движения слева направо */
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes для движения справа налево */
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(10px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Мобильные устройства: всегда центр, без анимации выравнивания */
+@media (max-width: 767px) {
+  .titleLink,
+  .titleLinkOdd,
+  .titleLinkEven {
+    text-align: center !important;
+  }
+  
+  .title {
+    text-align: center !important;
+  }
+  
+  /* Отключаем анимации выравнивания на мобильных */
+  .animateForward,
+  .animateBackward {
+    animation: none;
+  }
+}
+
+/* Планшеты и выше: включаем выравнивание и анимации */
+@media (min-width: 768px) {
+  .titleLinkOdd {
+    text-align: right;
+    transition: text-align 0.4s ease-in-out;
+  }
+  
+  .titleLinkEven {
+    text-align: left;
+    transition: text-align 0.4s ease-in-out;
+  }
+  
+  /* Включаем анимации только на планшетах+ */
+  .animateForward {
+    animation: slideLeftToRight 0.4s ease-in-out;
+  }
+  
+  .animateBackward {
+    animation: slideRightToLeft 0.4s ease-in-out;
+  }
+  
+  .title {
+    transition: text-align 0.4s ease-in-out;
+  }
+}
+
+/* Десктопы: возвращаем центрированное выравнивание */
+@media (min-width: 1024px) {
+  .titleLinkOdd,
+  .titleLinkEven {
+    text-align: center;
+  }
+  
+  /* На десктопах можно оставить легкую анимацию движения */
+  .animateForward {
+    animation: slideLeftToRight 0.3s ease-in-out;
+  }
+  
+  .animateBackward {
+    animation: slideRightToLeft 0.3s ease-in-out;
   }
 }

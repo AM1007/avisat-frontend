@@ -8,8 +8,6 @@
 .articleCard {
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* border: 1px solid red; */
-
   display: flex;
   flex-direction: column;
   height: 100%; 
@@ -81,14 +79,29 @@
 .titleBox{
   display: flex;
   flex-direction: column;
-  /* gap: 5px; */
   align-items: center;
   justify-content: center;
   padding: 15px 0 5px;
-  /*  border: 1px solid green; */
-  /* min-height: 90px; */
-  
 }
+
+@media (min-width: 768px) {
+.titleBoxOdd {
+  align-items: flex-end;  /* Прижать к правому краю */
+}
+
+.titleBoxEven {
+  align-items: flex-start; /* Прижать к левому краю */
+}
+}
+
+@media (min-width: 1024px) {
+.titleBoxOdd,
+.titleBoxEven {
+  align-items: center; /* Вернуть в центр */
+}
+}
+
+
 
 .title {
   display: -webkit-box; 
@@ -111,6 +124,7 @@
   .title {
     font-size: 17px;
   }
+ 
 }
 
 @media (min-width: 1024px) {
@@ -145,7 +159,7 @@
 
 .articleCard:hover .titleLink{
   color: #dc2626;
-  /* transform: scale(1.05); */
+
 }
 
 
@@ -201,13 +215,6 @@
   }
 }
 
-
-/* анимация текста */
-
-
-
-
-/* Keyframes для движения слева направо */
 @keyframes slideLeftToRight {
   0% {
     transform: translateX(-10px);
@@ -223,7 +230,6 @@
   }
 }
 
-/* Keyframes для движения справа налево */
 @keyframes slideRightToLeft {
   0% {
     transform: translateX(10px);
@@ -239,7 +245,6 @@
   }
 }
 
-/* Мобильные устройства: всегда центр, без анимации выравнивания */
 @media (max-width: 767px) {
   .titleLink,
   .titleLinkOdd,
@@ -251,14 +256,12 @@
     text-align: center !important;
   }
   
-  /* Отключаем анимации выравнивания на мобильных */
   .animateForward,
   .animateBackward {
     animation: none;
   }
 }
 
-/* Планшеты и выше: включаем выравнивание и анимации */
 @media (min-width: 768px) {
   .titleLinkOdd {
     text-align: right;
@@ -270,7 +273,6 @@
     transition: text-align 0.4s ease-in-out;
   }
   
-  /* Включаем анимации только на планшетах+ */
   .animateForward {
     animation: slideLeftToRight 0.4s ease-in-out;
   }
@@ -284,14 +286,12 @@
   }
 }
 
-/* Десктопы: возвращаем центрированное выравнивание */
 @media (min-width: 1024px) {
   .titleLinkOdd,
   .titleLinkEven {
     text-align: center;
   }
   
-  /* На десктопах можно оставить легкую анимацию движения */
   .animateForward {
     animation: slideLeftToRight 0.3s ease-in-out;
   }
@@ -299,4 +299,4 @@
   .animateBackward {
     animation: slideRightToLeft 0.3s ease-in-out;
   }
-}
+} 

@@ -25,9 +25,9 @@ export default function Header() {
         {/* Мобильная версия хедера (до 768px) */}
         <div className={styles.mobileHeader}>
           <div className={styles.mobileContainer}>
-            <Link href="/">
+            <Link href="/" className={`${styles.logoLink} ${mobileMenuOpen ? styles.logoHidden : ''}`}>
               <Image
-                src="/icons/logoMobile.svg"
+                src="/icons/logo-mobile.svg"
                 alt="АvіSat logo"
                 width={70}
                 height={28}
@@ -39,7 +39,7 @@ export default function Header() {
             <div className={styles.flagButtonContainer}> 
               <div className={styles.flagMobile}>
                 <Image
-                  src="/icons/FlagMobile.svg"
+                  src="/icons/flag-mobile.svg"
                   alt="Flag"
                   width={30}
                   height={30}
@@ -67,7 +67,7 @@ export default function Header() {
                 <Link href="/">
                   <div className={styles.logoMobileInDesktop}>
                     <Image
-                      src="/icons/logoMobile.svg"
+                      src="/icons/logo-mobile.svg"
                       alt="АvіSat logo"
                       width={70}
                       height={28}
@@ -76,7 +76,7 @@ export default function Header() {
                   </div>
                   <div className={styles.logoDesktop}>
                     <Image
-                      src="/icons/LogoDesktop.svg"
+                      src="/icons/logo-desktop.svg"
                       alt="АvіSat logo"
                       width={213}
                       height={80}
@@ -122,7 +122,7 @@ export default function Header() {
               <div className={styles.flagDesktopContainer}>
                 <div className={styles.flagDesktopSmall}>
                   <Image
-                    src="/icons/FlagMobile.svg"
+                    src="/icons/flag-mobile.svg"
                     alt="Flag"
                     width={30}
                     height={30}
@@ -133,7 +133,7 @@ export default function Header() {
                 
                 <div className={styles.flagDesktop}>
                   <Image
-                    src="/icons/FlagDesktop.svg"
+                    src="/icons/flag-desktop.svg"
                     alt="Flag"
                     width={33}
                     height={65}

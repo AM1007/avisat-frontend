@@ -1,0 +1,88 @@
+📄 .gitignore
+📄 eslint.config.mjs
+📄 LICENSE
+📄 next-env.d.ts
+📄 next.config.ts
+📄 package.json
+📄 postcss.config.mjs
+📄 project-structure.txt
+📁 public
+  📁 fonts
+    📄 Nunito-VariableFont_wght.ttf
+    📄 Strong-Regular.ttf
+  📁 icons
+    📄 Burger.svg
+    📄 Cross.svg
+    📄 flag-desktop.svg
+    📄 flag-mobile.svg
+    📄 logo-desktop.svg
+    📄 logo-mobile.svg
+  📁 images
+    📄 01_service-security.png
+    📄 02_service-video.png
+    📄 03_service-perimeter.png
+    📄 04_service-smart-home.png
+    📄 05_service-fire.png
+    📄 06_service-monitoring.png
+    📄 07_article.png
+    📄 08_article.png
+    📄 HeroDesktopLeft.png
+    📄 HeroDesktopRight.png
+📄 README.md
+📄 save-structure.cjs
+📁 src
+  📁 app
+    📄 favicon.ico
+    📄 globals.css
+    📄 layout.tsx
+    📄 page.tsx
+  📁 components
+    📁 layout
+      📄 Footer.tsx
+      📁 Header
+        📄 Header.module.css
+        📄 Header.tsx
+      📄 Layout.tsx
+      📁 MobileMenu
+        📄 MobileMenu.module.css
+        📄 MobileMenu.tsx
+    📁 sections
+      📁 AboutSection
+        📄 AboutSection.module.css
+        📄 AboutSection.tsx
+      📁 ArticlesSection
+        📄 ArticlesSection.module.css
+        📄 ArticlesSection.tsx
+      📄 ContactSection.tsx
+      📁 HeroSection
+        📄 HeroSection.module.css
+        📄 HeroSection.tsx
+      📁 ServicesSection
+        📄 ServicesSection.module.css
+        📄 ServicesSection.tsx
+    📁 ui
+      📁 ArticleCard
+        📄 ArticleCard.module.css
+        📄 ArticleCard.tsx
+      📄 Button.tsx
+      📄 ContactForm.tsx
+      📁 Container
+        📄 Container.module.css
+        📄 Container.tsx
+      📄 MobileMenuButton.tsx
+      📁 ServiceCard
+        📄 ServiceCard.module.css
+        📄 ServiceCard.tsx
+      📁 Swiper
+        📄 SwiperComponent.jsx
+        📄 SwiperComponent.module.css
+  📁 data
+    📄 articleLinks.ts
+    📄 dataLinks.ts
+    📄 servicesLinks.ts
+  📁 fonts
+    📄 index.js
+  📁 styles
+    📄 variables.css
+📄 tailwind.config.js
+📄 tsconfig.json

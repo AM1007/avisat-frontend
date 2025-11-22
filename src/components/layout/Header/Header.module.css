@@ -21,6 +21,16 @@
   justify-content: space-between;
 }
 
+/* Header.module.css */
+.logoLink {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.logoHidden {
+  opacity: 0;
+  pointer-events: none; /* отключаем клики по невидимому элементу */
+}
 
 .flagButtonContainer{
   display: flex;

@@ -63,7 +63,7 @@
   font-weight: 900;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
 .swiperContainer :global(.swiper-button-next),
 .swiperContainer :global(.swiper-button-prev) {
   color: #FF0000;

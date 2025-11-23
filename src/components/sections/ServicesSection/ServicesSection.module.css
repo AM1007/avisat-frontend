@@ -44,7 +44,7 @@
     font-size: 60px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
   .servicesTitle {
     font-size: 60px;
     padding: 28px 0;
@@ -94,12 +94,12 @@
   }
 }
 
-/* xxl - 1920px: великі монітори - остается 3 карточки */
-@media (min-width: 1920px) {
+/* xxl - 1930px: великі монітори - остается 3 карточки */
+@media (min-width: 1930px) {
   .servicesCardWrapper {
     padding-left: 48px;
     padding-right: 48px;
     gap: 40px;
-    max-width: 1920px;
+    max-width: 1930px;
   }
 }

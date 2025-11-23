@@ -26,6 +26,7 @@
     📄 06_service-monitoring.png
     📄 07_article.png
     📄 08_article.png
+    📄 Contacts.png
     📄 HeroDesktopLeft.png
     📄 HeroDesktopRight.png
 📄 README.md
@@ -38,7 +39,9 @@
     📄 page.tsx
   📁 components
     📁 layout
-      📄 Footer.tsx
+      📁 Footer
+        📄 Footer.module.css
+        📄 Footer.tsx
       📁 Header
         📄 Header.module.css
         📄 Header.tsx
@@ -53,7 +56,9 @@
       📁 ArticlesSection
         📄 ArticlesSection.module.css
         📄 ArticlesSection.tsx
-      📄 ContactSection.tsx
+      📁 ContactsSection
+        📄 ContactSection.tsx
+        📄 ContactsSection.module.css
       📁 HeroSection
         📄 HeroSection.module.css
         📄 HeroSection.tsx
@@ -65,6 +70,9 @@
         📄 ArticleCard.module.css
         📄 ArticleCard.tsx
       📄 Button.tsx
+      📁 ConsultButton
+        📄 ConsultButton.module.css
+        📄 ConsultButton.tsx
       📄 ContactForm.tsx
       📁 Container
         📄 Container.module.css

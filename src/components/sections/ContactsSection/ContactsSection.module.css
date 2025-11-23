@@ -1,0 +1,70 @@
+.contactsSection {
+  padding: 10px 0 90px;
+  background-image: url('/images/Contacts.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 80%;
+}
+
+@media (min-width: 768px) {
+  .contactsSection {
+    background-image: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contactsSection {
+    padding-top: 40px;
+  }
+}
+
+.contactsWrapper {
+  width: 100%;
+}
+
+.contactsTitle {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  text-align: center;
+  color: #050505; 
+  line-height: 1.5;
+  padding: 14px 0;
+}
+
+/* Планшеты */
+@media (min-width: 768px) {
+  .contactsTitle {
+    font-size: 32px;
+  }
+}
+
+/* Десктопы */
+@media (min-width: 1024px) {
+  .contactsTitle {
+    font-size: 36px;
+    padding: 17px 0;
+  }
+}
+
+/* Большие экраны */
+@media (min-width: 1440px) {
+  .contactsTitle {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .contactsTitle {
+    font-size: 60px;
+    padding: 28px 0;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

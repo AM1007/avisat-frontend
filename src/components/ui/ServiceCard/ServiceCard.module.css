@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
   .imageContainer {
     height: 360px;
   }
@@ -181,7 +181,7 @@ height: 80px;
     font-size: 15px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
   .cardDescription {
     font-size: 19px;
   }

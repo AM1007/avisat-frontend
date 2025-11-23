@@ -57,10 +57,10 @@
   }
 }
 
-/* xxl - 1920px великі монітори */
-@media (min-width: 1920px) {
+/* xxl - 1930px великі монітори */
+@media (min-width: 1930px) {
   .container {
-    max-width: 1920px;
+    max-width: 1930px;
     padding-left: 48px;
     padding-right: 48px;
   }

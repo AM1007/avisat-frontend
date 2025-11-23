@@ -41,7 +41,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
   .imageContainer {
     height: 445px
   }
@@ -140,7 +140,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
   .title {
     font-size: 23px;
   }
@@ -163,7 +163,7 @@
 }
 
 
-@media (min-width: 1920px) {
+@media (min-width: 1930px) {
   .titleLink {
     font-size: 19px;
   }

@@ -2,6 +2,7 @@
 
 import Container from '@/components/ui/Container/Container';
 // import Image from "next/image";
+import ConsultButton from '@/components/ui/ConsultButton/ConsultButton';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -14,20 +15,22 @@ export default function HeroSection() {
               <span className={styles.titleLarge}>Комплексні рішення</span>
               <span className={styles.titleSmall}>з безпеки та автоматизації</span>
             </h1>
-            <button className={styles.ctaButton}>
+            {/* <button className={styles.ctaButton}>
               ОТРИМАТИ КОНСУЛЬТАЦІЮ
-            </button>
+            </button> */}
+            <ConsultButton variant="hero" 
+            onClick={() => console.log('clicked')}
+            />
           </div>
-          <div className={styles.backgroundImage}>
-            {/* Специальный div для тени внизу */}
-      
-          </div>
+          {/* <div className={styles.backgroundImage}>
+     
+          </div> */}
         </div>
         
         {/* Правая часть Hero (фон с ограждением) */}
         <div className={styles.rightHero}>
-            {/* Специальный div для тени внизу */}
-            <div className={styles.shadowOverlay}></div>
+           
+            {/* <div className={styles.shadowOverlay}></div> */}
           
         </div>
      </Container>

@@ -1,0 +1,189 @@
+/* Footer mobile-first styles */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 32px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .footerContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Порядок элементов на desktop: Copyright - Logo - Контакты */
+  .leftSection {
+    order: 2; /* Logo в центр */
+  }
+
+  .rightSection {
+    order: 3; /* Контакты вправо */
+  }
+
+  .copyright {
+    order: 1; /* Copyright влево */
+  }
+}
+
+/* Left section */
+.leftSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .leftSection {
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .logoContainer {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logoContainer {
+    gap: 16px;
+  }
+}
+
+/* Logo visibility control */
+.logoMobile {
+  display: block;
+}
+
+.logoDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .logoMobile {
+    display: none;
+  }
+  
+  .logoDesktop {
+    display: block;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .tagline {
+    font-size: 11px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tagline {
+    font-size: 12px;
+  }
+}
+
+.adressText  {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.copyright{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+@media (min-width: 768px) {
+  .copyright {
+    flex-direction: column;
+    align-items: end;
+    font-size: 11px;
+    text-align: left;
+    gap: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+/* Right section */
+.rightSection  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rightSection {
+    align-items: flex-end;
+    text-align: right;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rightSection {
+    font-size: 16px;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .rightSection {
+    font-size: 18px;
+  }
+}
+
+.rightSection p {
+  margin: 0;
+}

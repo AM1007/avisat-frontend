@@ -1,0 +1,11 @@
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crossIcon {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(93%) saturate(7497%) hue-rotate(359deg) brightness(103%) contrast(117%);
+
+
+}

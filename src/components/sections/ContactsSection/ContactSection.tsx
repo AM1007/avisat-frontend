@@ -10,10 +10,7 @@ export default function ContactSection() {
           <h2 className={styles.contactsTitle}>Звяжіться з нами</h2>
 
           <div className={styles.buttonWrapper}>
-            <ConsultButton 
-              variant="contact"
-              // onClick={() => console.log('Contact form opened')}
-            />
+          <ConsultButton variant="contact" />
           </div>
         </div>
       </Container>

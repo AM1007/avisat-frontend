@@ -37,7 +37,7 @@ export default function Footer() {
 
           <address className={styles.rightSection}>
             <p className={styles.adressText}>Київ, Україна</p>
-            <a className={styles.adressText} href="tel:+380444066970">+380 44 406 69 70</a>
+            <a className={styles.adressText} href="tel:+380660876571">+380 66 087 6571</a>
             <a className={styles.adressText} href="mailto:info@avisat.ua">info@avisat.ua</a>
           </address>
 

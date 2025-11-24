@@ -49,8 +49,8 @@ export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
           </div> */}
           
           <div className={styles.phoneContainer}>
-            <a href="tel:+380444066970" className={styles.phoneLink}>
-              +380 44 406 69 70
+            <a href="tel:+380660876571" className={styles.phoneLink}>
+              +380 66 087 65 71
             </a>
           </div>
  

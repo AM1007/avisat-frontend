@@ -1,6 +1,5 @@
-'use client';
-
 import Image from "next/image";
+import styles from './MobileMenuButton.module.css';
 
 interface MobileMenuButtonProps {
   isOpen: boolean;
@@ -15,18 +14,20 @@ export default function MobileMenuButton({
 }: MobileMenuButtonProps) {
   return (
     <button
-      className={`flex items-center justify-center ${className}`}
+      className={`${styles.menuButton} ${className}`}
       onClick={onClick}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
       {isOpen ? (
-        <Image
-          src="/icons/Cross.svg"
-          alt="Close"
-          width={16}
-          height={16}
-          className="object-contain"
-        />
+        
+          <Image
+            src="/icons/Cross.svg"
+            alt="Close"
+            width={24}
+            height={24}
+            className={styles.crossIcon}
+          />
+
       ) : (
         <Image
           src="/icons/Burger.svg"

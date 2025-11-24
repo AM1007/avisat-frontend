@@ -18,9 +18,7 @@ export default function HeroSection() {
             {/* <button className={styles.ctaButton}>
               ОТРИМАТИ КОНСУЛЬТАЦІЮ
             </button> */}
-            <ConsultButton variant="hero" 
-            onClick={() => console.log('clicked')}
-            />
+          <ConsultButton variant="hero" />
           </div>
           {/* <div className={styles.backgroundImage}>
      

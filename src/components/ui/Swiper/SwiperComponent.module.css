@@ -1,4 +1,3 @@
-/* Mobile first стили для слайдера */
 .swiperContainer {
   width: 100%;
   height: auto;
@@ -7,18 +6,16 @@
 }
 
 @media (min-width: 1024px) {
-.swiperContainer {
-  width: 80%;
-  
-}
+  .swiperContainer {
+    width: 80%; 
+  }
 }
 
 @media (min-width: 1440px) {
-.swiperContainer {
-  width: 70%;
+  .swiperContainer {
+    width: 70%;
+  }
 }
-}
-
 
 .swiperFallback {
   display: grid;
@@ -34,18 +31,11 @@
   }
 }
 
-/* Все слайды одинаковой высоты */
 .swiperContainer :global(.swiper-slide) {
   height: auto;
-  display: flex; /* Важно! */
+  display: flex;
 }
 
-
-
-
-
-
-/* Кастомизация навигации Swiper */
 .swiperContainer :global(.swiper-button-next),
 .swiperContainer :global(.swiper-button-prev) {
   top: var(--swiper-navigation-top-offset, 40%);
@@ -64,29 +54,19 @@
 }
 
 @media (min-width: 1930px) {
-.swiperContainer :global(.swiper-button-next),
-.swiperContainer :global(.swiper-button-prev) {
-  color: #FF0000;
-  font-weight: bold;
-  top: var(--swiper-navigation-top-offset, 43%);
-  
+  .swiperContainer :global(.swiper-button-next),
+  .swiperContainer :global(.swiper-button-prev) {
+    color: #FF0000;
+    font-weight: bold;
+    top: var(--swiper-navigation-top-offset, 43%);
+  }
 }
-}
-
 
 .swiperContainer :global(.swiper-button-next):after,
 .swiperContainer :global(.swiper-button-prev):after {
   font-size: 20px;
 }
 
-/* @media (max-width: 767px) {
-  .swiperContainer :global(.swiper-button-next),
-  .swiperContainer :global(.swiper-button-prev) {
-    display: none;
-  }
-} */
-
-/* Кастомизация пагинации */
 .swiperContainer :global(.swiper-pagination-bullet) {
   background: #ccc;
   opacity: 0.5;

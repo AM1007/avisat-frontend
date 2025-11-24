@@ -10,7 +10,6 @@ export default function ServicesSection() {
       <Container>
         <div className={styles.servicesWrapper}>
           <h2 className={styles.servicesTitle}>Послуги</h2>
-
           <div className={styles.servicesCardWrapper}>
               {servicesLinks.map((service) => {
               return (
@@ -24,7 +23,6 @@ export default function ServicesSection() {
             })}
           </div>
         </div>
-
       </Container>
     </section>
   );

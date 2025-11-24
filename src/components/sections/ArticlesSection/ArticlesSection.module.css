@@ -1,22 +1,20 @@
 .ArticlesTitle {
+  padding: 14px 0;
   font-family: var(--font-nunito), Arial, sans-serif;
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 1.5;
   text-align: center;
   color: #050505; 
-  line-height: 1.5;
-  padding: 14px 0;
 }
 
-/* Планшеты */
 @media (min-width: 768px) {
   .ArticlesTitle {
     font-size: 32px;
   }
 }
 
-/* Десктопы */
 @media (min-width: 1024px) {
   .ArticlesTitle {
     font-size: 36px;
@@ -24,12 +22,12 @@
   }
 }
 
-/* Большие экраны */
 @media (min-width: 1440px) {
   .ArticlesTitle {
     font-size: 60px;
   }
 }
+
 @media (min-width: 1930px) {
   .ArticlesTitle {
     font-size: 60px;
@@ -41,24 +39,10 @@
  background-color: var(--foreground);  
 }
 
-/* @media (min-width: 768px) {
-  .articlesSection {
-    padding-top: 40px;
-  }
-} */
-
 .ArticlesContainer {
-  /* border: 1px solid red; */
   width: 100%;
   margin: 0;
 }
-
-
-/* @media (min-width: 768px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-} */
 
 .swiperLoading {
   display: flex;

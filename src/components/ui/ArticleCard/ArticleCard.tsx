@@ -9,8 +9,8 @@ interface ArticleCardProps {
   image: string;
   url: string;
   index?: number;
-  screenPosition?: number; // Новый пропс для позиции на экране
-  direction?: 'forward' | 'backward'; // Направление движения для анимации
+  screenPosition?: number;
+  direction?: 'forward' | 'backward';
 }
 
 export default function ArticleCard({ 

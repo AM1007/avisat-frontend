@@ -1,5 +1,3 @@
-// src/components/ui/NotFoundPage/NotFoundPage.tsx
-
 import Link from 'next/link';
 import styles from './NotFoundPage.module.css';
 

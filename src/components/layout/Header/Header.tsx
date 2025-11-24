@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "../../../data/dataLinks";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import MobileMenuButton from "../../ui/MobileMenuButton";
+import MobileMenuButton from "../../ui/MobileMenuButton/MobileMenuButton";
 import styles from './Header.module.css';
 import Container from "@/components/ui/Container/Container";
 
@@ -142,8 +142,8 @@ export default function Header() {
                   />
                 </div>
 
-                <a href="tel:+380444066970" className={styles.phoneLink}>
-                  +380 44 406 69 70
+                <a href="tel:+380660876571" className={styles.phoneLink}>
+                  +380 66 087 65 71
                 </a>
               </div>
             </div>

@@ -1,0 +1,117 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal container */
+.modal {
+  background-color: #F5F5F5;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.overlay.open .modal {
+  transform: scale(1) translateY(0);
+}
+
+.closeButton img {
+  color: #FFFFFF; /* currentColor унаследует белый */
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #FF0000;
+  background-color: #000000;
+}
+
+.title {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.closeButton:hover {
+  opacity: 0.7;
+}
+
+.closeButton img {
+  filter: invert(1);
+}
+
+/* Content */
+.content {
+  padding: 30px 20px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 40px 30px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .modal {
+    max-width: 600px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .modal {
+    max-width: 700px;
+  }
+  
+  .overlay {
+    padding: 40px;
+  }
+}

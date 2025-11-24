@@ -1,6 +1,7 @@
-// src/app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import { nunito, strong } from "@/fonts";
+import { ModalProvider } from "@/context/ModalContext";
+import ContactModal from "@/components/ui/ContactModal/ContactModal";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,11 +9,10 @@ export const metadata: Metadata = {
   description: "audio video smart advanced tech",
 };
 
-// Добавь export viewport
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 5, // Опционально, для доступности
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -26,7 +26,10 @@ export default function RootLayout({
         className={`${nunito.variable} ${strong.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        {children}
+        <ModalProvider>
+          {children}
+          <ContactModal />
+        </ModalProvider>
       </body>
     </html>
   );

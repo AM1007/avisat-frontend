@@ -1,8 +1,10 @@
+// src/components/layout/MobileMenu/MobileMenu.tsx
+
 'use client';
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-// import Image from "next/image";
 import { navLinks } from "../../../data/dataLinks";
 import styles from './MobileMenu.module.css';
 
@@ -12,8 +14,9 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
+  const pathname = usePathname();
+
   useEffect(() => {
-    // Только выполняем действия если меню открыто
     if (!isOpen) return;
 
     const handleEscape = (e: KeyboardEvent) => {
@@ -23,37 +26,23 @@ export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
     };
 
     document.addEventListener("keydown", handleEscape);
-
-    // Блокируем прокрутку страницы ТОЛЬКО при открытом меню
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
-      // Возвращаем прокрутку при закрытии
       document.body.style.overflow = "auto";
     };
-  }, [closeMenu, isOpen]); // Добавляем isOpen в зависимости
+  }, [closeMenu, isOpen]);
 
   return (
     <div className={`${styles.mobileMenuOverlay} ${isOpen ? styles.open : ''}`}>
       <div className={styles.mobileMenuContent}>
         <div className={styles.menuHeader}>
-          {/* <div className={styles.flagContainer}>
-            <Image
-              src="/icons/flag-mobile.svg"
-              alt="Український прапор"
-              width={16}
-              height={20}
-              className="object-contain transform -rotate-90"
-            />
-          </div> */}
-          
           <div className={styles.phoneContainer}>
             <a href="tel:+380660876571" className={styles.phoneLink}>
               +380 66 087 65 71
             </a>
           </div>
- 
         </div>
 
         <nav className={styles.menuNavigation}>
@@ -62,7 +51,7 @@ export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
               <li key={id} className={styles.menuItem} style={{ transitionDelay: `${0.1 + index * 0.05}s` }}>
                 <Link
                   href={href}
-                  className={styles.menuLink}
+                  className={`${styles.menuLink} ${pathname === href ? styles.menuLinkActive : ''}`}
                   onClick={closeMenu}
                 >
                   {label}
@@ -84,3 +73,75 @@ export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
     </div>
   );
 }
+
+// 'use client';
+
+// import { useEffect } from "react";
+// import Link from "next/link";
+// import { navLinks } from "../../../data/dataLinks";
+// import styles from './MobileMenu.module.css';
+
+// interface MobileMenuProps {
+//   closeMenu: () => void;
+//   isOpen?: boolean;
+// }
+
+// export default function MobileMenu({ closeMenu, isOpen }: MobileMenuProps) {
+//   useEffect(() => {
+//     if (!isOpen) return;
+
+//     const handleEscape = (e: KeyboardEvent) => {
+//       if (e.key === "Escape") {
+//         closeMenu();
+//       }
+//     };
+
+//     document.addEventListener("keydown", handleEscape);
+//     document.body.style.overflow = "hidden";
+
+//     return () => {
+//       document.removeEventListener("keydown", handleEscape);
+//       document.body.style.overflow = "auto";
+//     };
+//   }, [closeMenu, isOpen]); 
+
+//   return (
+//     <div className={`${styles.mobileMenuOverlay} ${isOpen ? styles.open : ''}`}>
+//       <div className={styles.mobileMenuContent}>
+//         <div className={styles.menuHeader}>         
+//           <div className={styles.phoneContainer}>
+//             <a href="tel:+380660876571" className={styles.phoneLink}>
+//               +380 66 087 65 71
+//             </a>
+//           </div>
+ 
+//         </div>
+
+//         <nav className={styles.menuNavigation}>
+//           <ul className={styles.menuList}>
+//             {navLinks.map(({ id, href, label }, index) => (
+//               <li key={id} className={styles.menuItem} style={{ transitionDelay: `${0.1 + index * 0.05}s` }}>
+//                 <Link
+//                   href={href}
+//                   className={styles.menuLink}
+//                   onClick={closeMenu}
+//                 >
+//                   {label}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+//         </nav>
+
+//         <div className={styles.menuFooter}>
+//           <button 
+//             className={styles.consultButton}
+//             onClick={closeMenu}
+//           >
+//             ОТРИМАТИ КОНСУЛЬТАЦІЮ
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }

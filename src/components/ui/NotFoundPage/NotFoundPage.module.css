@@ -1,0 +1,196 @@
+/* src/components/ui/NotFoundPage/NotFoundPage.module.css */
+
+.section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Error code 404 */
+.errorCode {
+  font-family: var(--font-strong), Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1;
+  color: #FF0000;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .errorCode {
+    font-size: 120px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .errorCode {
+    font-size: 140px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .errorCode {
+    font-size: 160px;
+    margin-top: 50px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Title */
+.title {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1f2937;
+  margin: 0 0 16px;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
+/* Message */
+.message {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 32px;
+}
+
+@media (min-width: 640px) {
+  .message {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .message {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
+}
+
+/* Actions container */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Home button (primary) */
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #000000;
+  border: 1px solid #000000;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  min-width: 220px;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .homeButton {
+    font-size: 16px;
+    padding: 14px 28px;
+    min-width: 240px;
+  }
+}
+
+.homeButton:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Contact button (secondary) */
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #374151;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  min-width: 220px;
+}
+
+@media (min-width: 640px) {
+  .contactButton {
+    font-size: 16px;
+    padding: 14px 28px;
+    min-width: 240px;
+  }
+}
+
+.contactButton:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+/* Arrow icon */
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .arrow {
+    font-size: 20px;
+  }
+}
+
+.homeButton:hover .arrow {
+  transform: translateX(-3px);
+}

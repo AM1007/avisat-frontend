@@ -179,6 +179,16 @@
   background-color: #171717;
 } 
 
+/* Active link state */
+.navLinkActive {
+  color: #FF0000;
+}
+
+.navLinkLight.navLinkActive {
+  color: #FF0000;
+}
+
+
 /* Правый хедер */
 
 .rightHeader {

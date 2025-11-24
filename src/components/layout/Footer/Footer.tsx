@@ -14,7 +14,7 @@ export default function Footer() {
                 <Image
                   src="/icons/logo-mobile.svg"
                   alt="АвіSat logo"
-                  width={70}
+                  width={90}
                   height={28}
                   priority
                 />
@@ -28,9 +28,6 @@ export default function Footer() {
                   priority
                 />
               </div>
-              {/* <span className={styles.tagline}>
-                audio video smart advanced tech
-              </span> */}
             </div>
 
           </div>

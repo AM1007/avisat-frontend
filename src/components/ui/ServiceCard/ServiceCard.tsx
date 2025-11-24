@@ -1,6 +1,5 @@
 import styles from './ServiceCard.module.css';
 import Image from "next/image";
-// import Link from "next/link";
 
 interface ServiceCardProps {
   title: string;

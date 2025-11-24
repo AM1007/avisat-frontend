@@ -1,4 +1,3 @@
-// Container.tsx
 import { ReactNode } from 'react';
 import styles from './Container.module.css';
 
@@ -15,7 +14,7 @@ export default function Container({
   fluid = false,
   noGutter = false 
 }: ContainerProps) {
-  // Определяем классы на основе пропсов
+  
   const containerClass = fluid 
     ? styles.containerFluid 
     : styles.container;

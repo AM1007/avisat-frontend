@@ -29,25 +29,21 @@ export default function ContactModal() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Валидация формы
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
-    // Имя: обязательное, минимум 2 символа
     if (!formData.name.trim()) {
       newErrors.name = "Ім'я є обов'язковим";
     } else if (formData.name.trim().length < 2) {
       newErrors.name = "Ім'я має містити мінімум 2 символи";
     }
 
-    // Email: обязательное, формат email
     if (!formData.email.trim()) {
       newErrors.email = "Email є обов'язковим";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Невірний формат email";
     }
 
-    // Сообщение: обязательное, минимум 10 символов
     if (!formData.message.trim()) {
       newErrors.message = "Тема повідомлення є обов'язковою";
     } else if (formData.message.trim().length < 10) {
@@ -58,20 +54,17 @@ export default function ContactModal() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Обработка изменения полей
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Очистка ошибки при изменении поля
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
 
-  // Обработка отправки формы
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
@@ -81,25 +74,21 @@ export default function ContactModal() {
 
     setIsSubmitting(true);
 
-    // Заглушка отправки
     console.log('Form submitted:', {
       to: 'info@avisat.com.ua',
       ...formData
     });
 
-    // Имитация отправки
     setTimeout(() => {
       setIsSubmitting(false);
       alert('Дякуємо! Ваше повідомлення надіслано.');
       
-      // Сброс формы
       setFormData({ name: '', email: '', message: '' });
       setErrors({});
       closeModal();
     }, 1000);
   };
 
-  // Сброс формы при закрытии
   const handleClose = () => {
     setFormData({ name: '', email: '', message: '' });
     setErrors({});
@@ -118,7 +107,6 @@ export default function ContactModal() {
         </p>
 
         <div className={styles.form}>
-          {/* Имя */}
           <div className={styles.fieldGroup}>
             <label htmlFor="name" className={styles.label}>
               Ім&apos;я та прізвище *
@@ -137,8 +125,6 @@ export default function ContactModal() {
               <span className={styles.error}>{errors.name}</span>
             )}
           </div>
-
-          {/* Email */}
           <div className={styles.fieldGroup}>
             <label htmlFor="email" className={styles.label}>
               Email *
@@ -158,7 +144,6 @@ export default function ContactModal() {
             )}
           </div>
 
-          {/* Сообщение */}
           <div className={styles.fieldGroup}>
             <label htmlFor="message" className={styles.label}>
               Тема повідомлення *
@@ -178,7 +163,6 @@ export default function ContactModal() {
             )}
           </div>
 
-          {/* Кнопка отправки */}
           <button
             type="button"
             onClick={handleSubmit}

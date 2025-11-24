@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import Container from "@/components/ui/Container/Container";
 import styles from './ArticlesSection.module.css';
 
-// Динамический импорт SwiperComponent без SSR
 const SwiperComponent = dynamic(
   () => import("../../ui/Swiper/SwiperComponent"),
   { 

@@ -14,7 +14,6 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
     if (onSubmit) {
       onSubmit(phone);
     }
-    // Здесь можно добавить логику отправки формы
     console.log('Phone submitted:', phone);
   };
 

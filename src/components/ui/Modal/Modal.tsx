@@ -13,7 +13,6 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children, title }: ModalProps) {
-  // Блокировка скролла при открытом модальном окне
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -26,7 +25,6 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
     };
   }, [isOpen]);
 
-  // Закрытие по Escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -40,7 +38,6 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
 
   if (!isOpen) return null;
 
-  // Закрытие по клику на overlay
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();

@@ -9,7 +9,6 @@ export default function AboutSection() {
         <h2 className={styles.title}>
           ПРО КОМПАНІЮ
         </h2>
-
         <div className={styles.contentWrapper}>
           <p className={styles.paragraph}>
             <span className={styles.paragraphSelection}>АвіСат</span> - компанія з багаторічним

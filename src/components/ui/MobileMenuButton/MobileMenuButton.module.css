@@ -2,10 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.menuButton:active {
+  opacity: 0.7;
+  transform: scale(0.95);
 }
 
 .crossIcon {
   filter: brightness(0) saturate(100%) invert(14%) sepia(93%) saturate(7497%) hue-rotate(359deg) brightness(103%) contrast(117%);
-
-
 }

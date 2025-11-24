@@ -33,9 +33,20 @@
 📄 save-structure.cjs
 📁 src
   📁 app
+    📁 (pages)
+      📁 about
+        📄 page.tsx
+      📁 contacts
+        📄 page.tsx
+      📄 layout.tsx
+      📁 security
+        📄 page.tsx
+      📁 smart-house
+        📄 page.tsx
     📄 favicon.ico
     📄 globals.css
     📄 layout.tsx
+    📄 not-found.tsx
     📄 page.tsx
   📁 components
     📁 layout
@@ -86,6 +97,12 @@
       📁 Modal
         📄 Modal.module.css
         📄 Modal.tsx
+      📁 NotFoundPage
+        📄 NotFoundPage.module.css
+        📄 NotFoundPage.tsx
+      📁 PageUnderConstruction
+        📄 PageUnderConstruction.module.css
+        📄 PageUnderConstruction.tsx
       📁 ServiceCard
         📄 ServiceCard.module.css
         📄 ServiceCard.tsx

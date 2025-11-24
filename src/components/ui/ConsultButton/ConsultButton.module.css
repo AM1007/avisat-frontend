@@ -1,4 +1,3 @@
-/* Анимация пульсации кнопки (фон + тень) */
 @keyframes pulseRed {
   0% { 
     box-shadow: 0 0 15px rgba(255,60,60,0.6); 
@@ -16,17 +15,22 @@
 }
 
 .heroButton {
-  font-size: 10px;
   padding: 8px 8px 8px 65px;
-  background-color: #ffffff;
-  color: #000000;
   border: none;
+  font-size: 10px;
   font-family: var(--font-nunito), Arial, sans-serif;
   text-transform: uppercase;
   position: relative;
+  color: #000000;
+  background-color: #ffffff;
   z-index: 9999;
+  transition: all 0.2s ease;
 }
 
+.heroButton:active {
+  transform: scale(0.98);
+  background-color: #f0f0f0;
+}
 
 @media (min-width: 480px) {
   .heroButton {
@@ -39,26 +43,36 @@
   .heroButton {
     font-size: 10px;
     padding: 8px 10px;
-    cursor: pointer;
     color: #ffffff;
     animation: pulseRed 2s ease-in-out infinite;
   }
 
+  .heroButton:active {
+    animation-play-state: paused;
+    background-color: #dc2626;
+    transform: scale(0.98);
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroButton {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  .heroButton:active {
+    transform: none;
+    background-color: inherit;
+  }
+
   .heroButton:hover {
-    /* Останавливаем анимацию при наведении */
     animation-play-state: paused;
     background-color: #dc2626;
     color: #ffffff;
   }
 }
 
-@media (min-width: 1024px) {
-  .heroButton {
-    font-size: 15px;
-    padding: 12px 20px;
-  }
-}
-
 @media (min-width: 1440px) {
   .heroButton {
     font-size: 18px;
@@ -75,20 +89,19 @@
 
 .contactButton {
   width: 255px;
-  margin-top: 40px;
-  background-color: #000000;
-  color: #ffffff;
   padding: 0.75rem;
+  border: none;
   font-size: 14px;
   font-weight: 600;
   font-family: var(--font-nunito), Arial, sans-serif;
   text-transform: uppercase;
-  border: none;
-  
+  color: #ffffff;
+  transition: all 0.2s ease;
 }
 
-.contactButton:hover {
+.contactButton:active {
   background-color: #dc2626;
+  transform: scale(0.98);
 }
 
 @media (min-width: 480px) {
@@ -100,11 +113,10 @@
 
 @media (min-width: 768px) {
   .contactButton {
-    transition: background-color 0.2s ease;
-    cursor: pointer;
     width: 270px;
-    font-size: 16px;
     padding: 1rem;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
   }
 }
 
@@ -113,133 +125,30 @@
     width: 295px;
     font-size: 18px;
     padding: 1.125rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .contactButton {
-    width: 480px;
-    font-size: 20px;
-    padding: 1.25rem;
-  }
-}
-
-@media (min-width: 1930px) {
-  .contactButton {
-    font-size: 24px;
-    padding: 1.5rem;
-  }
-}
-
-/* .heroButton {
-  font-size: 10px;
-  padding: 8px 8px 8px 65px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  font-family: var(--font-nunito), Arial, sans-serif;
-  text-transform: uppercase;
-  position: relative;
-z-index: 9999;
-}
-
-
-@media (min-width: 480px) {
-  .heroButton {
-    font-size: 12px;
-    padding: 8px 10px 8px 80px;
-  }
-}
-
-@media (min-width: 768px) {
-  .heroButton {
-    font-size: 10px;
-    padding: 8px 10px;
-      cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease;
-  }
-
-  .heroButton:hover {
-  background-color: #dc2626;
-  color: #ffffff;
-}
-}
-
-@media (min-width: 1024px) {
-  .heroButton {
-    font-size: 15px;
-    padding: 12px 20px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .heroButton {
-    font-size: 18px;
-    padding: 23px 25px;
-  }
-}
-
-@media (min-width: 1930px) {
-  .heroButton {
-    font-size: 27px;
-    padding: 27px 32px;
-  }
-}
-
-.contactButton {
-  width: 255px;
-  margin-top: 40px;
-  background-color: #000000;
-  color: #ffffff;
-  padding: 0.75rem;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: var(--font-nunito), Arial, sans-serif;
-  text-transform: uppercase;
-  border: none;
-  
-}
-
-.contactButton:hover {
-  background-color: #dc2626;
-}
-
-@media (min-width: 480px) {
-  .contactButton {
-    font-size: 16px;
-    padding: 0.875rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .contactButton {
-    transition: background-color 0.2s ease;
     cursor: pointer;
-    width: 270px;
-    font-size: 16px;
-    padding: 1rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .contactButton {
-    width: 295px;
-    font-size: 18px;
-    padding: 1.125rem;
+  .contactButton:active {
+    transform: none;
+    background-color: #000000;
+  }
+
+  .contactButton:hover {
+    background-color: #dc2626;
   }
 }
 
 @media (min-width: 1440px) {
   .contactButton {
     width: 480px;
-    font-size: 20px;
     padding: 1.25rem;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1930px) {
   .contactButton {
-    font-size: 24px;
     padding: 1.5rem;
+    font-size: 24px;
   }
-} */
+}

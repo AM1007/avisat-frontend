@@ -1,8 +1,7 @@
-/* Footer mobile-first styles */
 .footer {
-  background-color: #000000;
-  color: #ffffff;
   padding: 20px 0;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 @media (min-width: 768px) {
@@ -32,21 +31,37 @@
     gap: 40px;
   }
 
-  /* Порядок элементов на desktop: Copyright - Logo - Контакты */
   .leftSection {
-    order: 2; /* Logo в центр */
+    order: 2;
   }
 
   .rightSection {
-    order: 3; /* Контакты вправо */
+    order: 3;
   }
 
   .copyright {
-    order: 1; /* Copyright влево */
+    order: 1;
   }
 }
 
-/* Left section */
+@media (min-width: 1024px) {
+  .footerContent {
+    gap: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footerContent {
+    gap: 100px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .footerContent {
+    gap: 140px;
+  }
+}
+
 .leftSection {
   display: flex;
   flex-direction: row;
@@ -71,7 +86,6 @@
 @media (min-width: 768px) {
   .logoContainer {
     flex-direction: row;
-    align-items: center;
     gap: 12px;
   }
 }
@@ -82,7 +96,6 @@
   }
 }
 
-/* Logo visibility control */
 .logoMobile {
   display: block;
 }
@@ -101,7 +114,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .tagline {
     font-size: 11px;
@@ -117,13 +129,24 @@
 
 .adressText  {
   font-family: var(--font-nunito), Arial, sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
 }
 
+@media (min-width: 1440px) {
+  .adressText {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .adressText {
+    font-size: 20px;
+  }
+}
 
 .copyright{
   display: flex;
@@ -132,55 +155,33 @@
   gap: 5px;
 }
 
-
 @media (min-width: 768px) {
   .copyright {
     flex-direction: column;
     align-items: end;
-    font-size: 11px;
     text-align: left;
     gap: 0;
   }
 }
 
-@media (min-width: 1440px) {
-  .copyright {
-    font-size: 12px;
-  }
-}
-
-/* Right section */
 .rightSection  {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-nunito), Arial, sans-serif;
-  font-size: 13px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 1.4;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
   .rightSection {
     align-items: flex-end;
     text-align: right;
-    font-size: 14px;
   }
 }
 
 @media (min-width: 1440px) {
   .rightSection {
-    font-size: 16px;
-    gap: 10px;
-  }
-}
-
-@media (min-width: 1930px) {
-  .rightSection {
-    font-size: 18px;
+    gap: 0;
   }
 }
 

@@ -1,23 +1,21 @@
 .articleCardLink {
+  display: block;
   text-decoration: none;
   color: inherit;
-  display: block;
   transition: transform 0.3s ease;
 }
 
 .articleCard {
-  cursor: pointer;
-  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%; 
   width: 100%;
+  height: 100%; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .imageContainer {
-
   position: relative;
-  
   height: 300px;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -62,14 +60,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
   opacity: 0;
   transition: opacity 0.3s ease;
-  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .articleCard:hover .overlay {
@@ -86,32 +84,30 @@
 
 @media (min-width: 768px) {
 .titleBoxOdd {
-  align-items: flex-end;  /* Прижать к правому краю */
+  align-items: flex-end;
 }
 
 .titleBoxEven {
-  align-items: flex-start; /* Прижать к левому краю */
+  align-items: flex-start;
 }
 }
 
 @media (min-width: 1024px) {
-.titleBoxOdd,
-.titleBoxEven {
-  align-items: center; /* Вернуть в центр */
+  .titleBoxOdd,
+  .titleBoxEven {
+    align-items: center;
+  }
 }
-}
-
-
 
 .title {
   display: -webkit-box; 
-  color: #ffffff;
   font-size: 17px;
   font-weight: 400;
   text-align: center;
   font-family: var(--font-nunito), Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1.5;
+  color: #ffffff;
 }
 
 @media (min-width: 480px) {
@@ -124,7 +120,6 @@
   .title {
     font-size: 17px;
   }
- 
 }
 
 @media (min-width: 1024px) {
@@ -132,7 +127,6 @@
     font-size: 18px;
   }
 }
-
 
 @media (min-width: 1440px) {
   .title {
@@ -149,19 +143,17 @@
 .titleLink{
   display: block;
   margin-top: auto;
-  cursor: pointer;
   text-align: center;
   font-size: 16px;
+  cursor: pointer;
+  color: #FF0000;
   transition: transform 0.3s ease;
   transition: text-align 0.4s ease-in-out, transform 0.4s ease-in-out;
-  color: #FF0000;
 }
 
 .articleCard:hover .titleLink{
   color: #dc2626;
-
 }
-
 
 @media (min-width: 1930px) {
   .titleLink {
@@ -173,7 +165,6 @@
   .titleLinkOdd {
     text-align: right;
   }
-  
   .titleLinkEven {
     text-align: left;
   }
@@ -182,23 +173,22 @@
 .button {
   display: none;
   padding: 0.75rem 1.5rem;
-  background-color: #dc2626;
-  color: #ffffff;
-  text-decoration: none;
+  font-size: 0.875rem;
   font-weight: 600;
   font-family: var(--font-strong), Arial, sans-serif;
-  text-transform: uppercase;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
   letter-spacing: 0.025em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #dc2626;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .button:hover {
   background-color: #b91c1c;
   transform: translateY(-1px);
 }
-
 
 @media (min-width: 1024px) {
   .button {

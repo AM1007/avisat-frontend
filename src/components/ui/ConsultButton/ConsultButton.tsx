@@ -6,11 +6,13 @@ import styles from './ConsultButton.module.css';
 interface ConsultButtonProps {
   variant: 'hero' | 'contact';
   className?: string;
+  onClick?: () => void;
 }
 
 export default function ConsultButton({ 
   variant, 
-  className = '' 
+  className = '',
+  onClick
 }: ConsultButtonProps) {
   const { openModal } = useModal();
 
@@ -18,10 +20,15 @@ export default function ConsultButton({
     ? styles.heroButton 
     : styles.contactButton;
 
+  const handleClick = () => {
+    openModal();           
+    if (onClick) onClick(); 
+  };
+
   return (
     <button 
       type="button"
-      onClick={openModal}
+      onClick={handleClick}
       className={`${buttonClass} ${className}`}
     >
       ОТРИМАТИ КОНСУЛЬТАЦІЮ

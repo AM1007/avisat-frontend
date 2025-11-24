@@ -3,9 +3,9 @@
 }
 
 @media (min-width: 1440px) {
-.servicesSection{
-  padding-top: 40px;
-}
+  .servicesSection{
+    padding-top: 40px;
+  }
 }
 
 .servicesWrapper{
@@ -13,6 +13,7 @@
 }
 
 .servicesTitle {
+  padding: 14px 0;
   font-family: var(--font-nunito), Arial, sans-serif;
   font-size: 28px;
   font-weight: 400;
@@ -20,17 +21,14 @@
   text-align: center;
   color: #050505; 
   line-height: 1.5;
-  padding: 14px 0;
 }
 
-/* Планшеты */
 @media (min-width: 768px) {
   .servicesTitle {
     font-size: 32px;
   }
 }
 
-/* Десктопы */
 @media (min-width: 1024px) {
   .servicesTitle {
     font-size: 36px;
@@ -38,12 +36,12 @@
   }
 }
 
-/* Большие экраны */
 @media (min-width: 1440px) {
   .servicesTitle {
     font-size: 60px;
   }
 }
+
 @media (min-width: 1930px) {
   .servicesTitle {
     font-size: 60px;
@@ -51,20 +49,15 @@
   }
 }
 
-
-/* Mobile First: 375px и 480px - 1 карточка в ряд */
-/* По умолчанию grid-template-columns: 1fr; */
 .servicesCardWrapper {
   display: grid;
   grid-template-columns: 1fr;
-  /* border: 1px solid red; */
   margin: 0 -20px 0 -20px;
   gap: 10px;
 }
 
 @media (min-width: 768px){
   .servicesCardWrapper{
-    
     margin: 0 -24px 0 -24px;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -72,19 +65,15 @@
   }
 }
 
-
-/* lg - 1024px: планшети в ландшафті - 3 карточки в ряд */
 @media (min-width: 1024px) {
   .servicesCardWrapper {
     margin: 0 -32px 0 -32px;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 30px;
     max-width: 1024px;
-   
   }
 }
 
-/* xl - 1440px: стандартні десктопи - остается 3 карточки */
 @media (min-width: 1440px) {
   .servicesCardWrapper {
     padding-left: 40px;
@@ -94,7 +83,6 @@
   }
 }
 
-/* xxl - 1930px: великі монітори - остается 3 карточки */
 @media (min-width: 1930px) {
   .servicesCardWrapper {
     padding-left: 48px;

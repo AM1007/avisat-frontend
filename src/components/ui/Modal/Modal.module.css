@@ -1,37 +1,35 @@
-/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.85);
   z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 20px;
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.85);
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .overlay.open {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
-/* Modal container */
 .modal {
-  background-color: #F5F5F5;
+  position: relative;
+  overflow-y: auto;
   width: 100%;
   max-width: 500px;
   max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  transform: scale(0.9) translateY(20px);
-  transition: transform 0.3s ease;
+  background-color: #F5F5F5;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  transform: scale(0.9) translateY(20px);
 }
 
 .overlay.open .modal {
@@ -39,11 +37,9 @@
 }
 
 .closeButton img {
-  color: #FFFFFF; /* currentColor унаследует белый */
+  color: #FFFFFF;
 }
 
-
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -54,12 +50,12 @@
 }
 
 .title {
+  margin: 0;
   font-family: var(--font-nunito), Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -69,25 +65,39 @@
 }
 
 .closeButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s ease;
+  padding: 4px;
+  background: none;
+  border: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.closeButton:hover {
+.closeButton:active {
   opacity: 0.7;
+  transform: scale(0.95);
+}
+
+@media (min-width: 1024px) {
+  .closeButton {
+    cursor: pointer;
+  }
+
+  .closeButton:active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .closeButton:hover {
+    opacity: 0.7;
+  }
 }
 
 .closeButton img {
   filter: invert(1);
 }
 
-/* Content */
 .content {
   padding: 30px 20px;
 }
@@ -98,14 +108,12 @@
   }
 }
 
-/* Tablet */
 @media (min-width: 768px) {
   .modal {
     max-width: 600px;
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .modal {
     max-width: 700px;

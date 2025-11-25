@@ -1,0 +1,141 @@
+.heroSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    min-height: 70vh;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.backgroundImage img {
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 270px;
+  padding: 100px 0 20px 0;
+  color: red;
+  /* border: 1px solid red; */
+}
+
+@media (min-width: 480px) {
+  .content {
+    padding: 120px 0 0 0;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 60px 0 0 0;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    padding: 60px 0 0 0;
+    max-width: 530px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content {
+    padding: 200px 0 50px 0;
+  }
+}
+
+.title {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+@media (min-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 56px;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 22px;
+  }
+}
+
+.description {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .description {
+    font-size: 17px;
+  }
+}

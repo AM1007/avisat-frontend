@@ -15,7 +15,9 @@
     📄 Cross.svg
     📄 flag-desktop.svg
     📄 flag-mobile.svg
+    📄 logo-desktop-dark.svg
     📄 logo-desktop.svg
+    📄 logo-mobile-dark.svg
     📄 logo-mobile.svg
   📁 images
     📄 01_service-security.png
@@ -56,7 +58,6 @@
       📁 Header
         📄 Header.module.css
         📄 Header.tsx
-      📄 Layout.tsx
       📁 MobileMenu
         📄 MobileMenu.module.css
         📄 MobileMenu.tsx
@@ -68,8 +69,8 @@
         📄 ArticlesSection.module.css
         📄 ArticlesSection.tsx
       📁 ContactsSection
+        📄 ContactSection.module.css
         📄 ContactSection.tsx
-        📄 ContactsSection.module.css
       📁 HeroSection
         📄 HeroSection.module.css
         📄 HeroSection.tsx

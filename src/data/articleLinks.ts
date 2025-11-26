@@ -13,13 +13,13 @@ const articleLinks = [
     },
         {
       id: 3,
-      title: "ВІДЕОСПОСТЕРЕЖЕННЯ СЬОГОДНІ",
+      title: "ПОМИЛКИ БЕЗПЕКИ",
       image: "/images/07_article.png",
       url: "/articles/video-surveillance",
     },
     {
       id: 4,
-      title: "ОХОРОНА ПЕРИМЕТРУ: НОВІ ТЕХНОЛОГІЇ", 
+      title: "ПІДГОТОВКА ДОМУ ПІД СМАРТ", 
       image: "/images/08_article.png",
       url: "/articles/perimeter-security",
     },

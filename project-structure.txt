@@ -31,6 +31,14 @@
     📄 Contacts.png
     📄 HeroDesktopLeft.png
     📄 HeroDesktopRight.png
+    📄 luxury-modern-living-room-with-smart-home-devices-.jpg
+    📄 modern-security-control-room-with-multiple-monitor.jpg
+    📄 modern-smart-home-interior-with-tablet-control-pan.jpg
+    📄 modern-smart-home-security-system-control-panel-ta.jpg
+    📄 perimeter-security-fence-with-sensors-at-night-bla.jpg
+    📄 security-camera-on-building-facade-modern-architec.jpg
+    📄 smart-home-control-panel-on-wall--touchscreen-inte.jpg
+    📄 smartphone-app-controlling-smart-home-devices--mod.jpg
 📄 README.md
 📄 save-structure.cjs
 📁 src
@@ -74,6 +82,23 @@
       📁 HeroSection
         📄 HeroSection.module.css
         📄 HeroSection.tsx
+      📁 SecurityPage
+        📄 SecurityBenefitsSection.module.css
+        📄 SecurityBenefitsSection.tsx
+        📄 SecurityCardsSection.module.css
+        📄 SecurityCardsSection.tsx
+        📄 SecurityCTASection.module.css
+        📄 SecurityCTASection.tsx
+        📄 SecurityHeroSection.module.css
+        📄 SecurityHeroSection.tsx
+        📄 SecurityIntroSection.module.css
+        📄 SecurityIntroSection.tsx
+        📄 SecurityObjectsSection.module.css
+        📄 SecurityObjectsSection.tsx
+        📄 SecurityStepsSection.module.css
+        📄 SecurityStepsSection.tsx
+        📄 SecurityWhenNeededSection.module.css
+        📄 SecurityWhenNeededSection.tsx
       📁 ServicesSection
         📄 ServicesSection.module.css
         📄 ServicesSection.tsx
@@ -81,6 +106,9 @@
       📁 ArticleCard
         📄 ArticleCard.module.css
         📄 ArticleCard.tsx
+      📁 BackButton
+        📄 BackButton.module.css
+        📄 BackButton.tsx
       📄 Button.tsx
       📁 ConsultButton
         📄 ConsultButton.module.css

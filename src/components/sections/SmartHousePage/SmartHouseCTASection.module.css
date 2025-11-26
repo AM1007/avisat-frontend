@@ -1,0 +1,277 @@
+.section {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    padding: 100px 0;
+  }
+}
+
+@media (min-width: 1930px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    gap: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid {
+    gap: 64px;
+  }
+}
+
+.content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 50%;
+  }
+}
+
+.title {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #171717;
+  text-wrap: balance;
+}
+
+@media (min-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .title {
+    font-size: 38px;
+    margin-bottom: 32px;
+  }
+}
+
+.description {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #171717;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .description {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .description {
+    font-size: 18px;
+  }
+}
+
+.highlight {
+  font-weight: 500;
+  color: #171717;
+}
+
+@media (min-width: 768px) {
+  .highlight {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .highlight {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .highlight {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .highlight {
+    font-size: 19px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (min-width: 480px) {
+  .buttons {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttons {
+    margin-top: 32px;
+    gap: 20px;
+  }
+}
+
+.consultButton {
+  width: 100%;
+  background-color: #FF0000;
+}
+
+@media (min-width: 480px) {
+  .consultButton {
+    width: auto;
+  }
+}
+
+.consultButton:hover {
+  background-color: #dc2626;
+}
+
+.backButton {
+  width: 100%;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+@media (min-width: 480px) {
+  .backButton {
+    width: auto;
+  }
+}
+
+.backButton:hover {
+  border-color: #FF0000;
+  color: #FF0000;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .imageWrapper {
+    height: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .imageWrapper {
+    width: 50%;
+    height: 380px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imageWrapper {
+    height: 420px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .imageWrapper {
+    height: 460px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .imageWrapper {
+    height: 500px;
+  }
+}
+
+.image {
+  object-fit: cover;
+  filter: grayscale(100%);
+}

@@ -1,0 +1,94 @@
+.section {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    padding: 100px 0;
+  }
+}
+
+@media (min-width: 1930px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+  .content {
+    max-width: 900px;
+  }
+}
+
+.text {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #171717;
+}
+
+@media (min-width: 480px) {
+  .text {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .text {
+    font-size: 22px;
+  }
+}
+
+.text:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.highlight {
+  color: #FF0000;
+  font-weight: 600;
+}

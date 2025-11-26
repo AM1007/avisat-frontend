@@ -1,0 +1,97 @@
+.section {
+  padding: 40px 0 60px;
+  background-color: #F5F5F5;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 60px 0 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 0 100px;
+  }
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.text {
+  font-family: var(--font-nunito), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .text {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text {
+    font-size: 18px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 480px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.consultButton {
+  width: 100%;
+  max-width: 280px;
+  background-color: #000000;
+}
+
+@media (min-width: 480px) {
+  .consultButton {
+    width: auto;
+    max-width: none;
+  }
+}
+
+.backButton {
+  width: 100%;
+  max-width: 280px;
+}
+
+@media (min-width: 480px) {
+  .backButton {
+    width: auto;
+    max-width: none;
+  }
+}

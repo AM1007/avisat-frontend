@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Container from '@/components/ui/Container/Container';
 import styles from './SecurityHeroSection.module.css';
+import ConsultButton from '@/components/ui/ConsultButton/ConsultButton';
 
 export default function SecurityHeroSection() {
   return (
@@ -22,19 +23,26 @@ export default function SecurityHeroSection() {
             Захист — не розкіш, а база для спокійного життя.
           </p>
           <p className={styles.description}>
-            Це система, яка передбачає ризики, реагує миттєво та інтегрується у ваш побут.<br/>
-            У сучасному світі безпека — це не просто сигналізація чи кілька камер. 
+            Це система, яка передбачає ризики, реагує миттєво та інтегрується у ваш побут. У сучасному світі безпека — це не просто сигналізація чи кілька камер. 
           </p>
 
           <p className={styles.description}>
-            АвіСат створює такі системи. 
+            <span className={styles.company}>АвіСат</span> створює такі системи. 
           </p>
 
           <p className={styles.description}>
             Ми працюємо для приватних осіб, бізнесу та організацій, 
-            які розуміють:<br/>  дешевше запобігти, ніж відновлювати.
+            які розуміють: <br/> <span className={styles.bold}>дешевше запобігти, ніж відновлювати.</span>
           </p>
+
+          <p className={styles.description}>
+            
+          </p>
+          <div className={styles.buttons}>
+            <ConsultButton variant="hero" className={styles.consultButton} />
+          </div>
         </div>
+
       </Container>
     </section>
   );

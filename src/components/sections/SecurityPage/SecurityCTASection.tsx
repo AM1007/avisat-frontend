@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Container from '@/components/ui/Container/Container';
 import ConsultButton from '@/components/ui/ConsultButton/ConsultButton';
-import BackButton from '@/components/ui/BackButton/BackButton';
 import styles from './SecurityCTASection.module.css';
 
 export default function SecurityCTASection() {
@@ -19,15 +18,14 @@ export default function SecurityCTASection() {
       <Container>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>
-            Безпека починається не з тривоги. А з рішення.
+            Безпека починається не з тривоги, <br/> а з рішення
           </h2>
           <p className={styles.description}>
             Зробіть свій вибір зараз — і будьте спокійні за дім, бізнес і близьких.
           </p>
 
           <div className={styles.buttons}>
-            <ConsultButton variant="contact" className={styles.consultButton} />
-            <BackButton href="/" className={styles.backButton} />
+            <ConsultButton variant="hero" className={styles.consultButton} />
           </div>
         </div>
       </Container>

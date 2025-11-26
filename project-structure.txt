@@ -36,7 +36,9 @@
     📄 modern-smart-home-interior-with-tablet-control-pan.jpg
     📄 modern-smart-home-security-system-control-panel-ta.jpg
     📄 perimeter-security-fence-with-sensors-at-night-bla.jpg
+    📄 professional-security-technician-team-work-install.jpg
     📄 security-camera-on-building-facade-modern-architec.jpg
+    📄 security-system-installation-planning-blueprint-te.jpg
     📄 smart-home-control-panel-on-wall--touchscreen-inte.jpg
     📄 smartphone-app-controlling-smart-home-devices--mod.jpg
 📄 README.md
@@ -70,6 +72,17 @@
         📄 MobileMenu.module.css
         📄 MobileMenu.tsx
     📁 sections
+      📁 AboutPage
+        📄 AboutApproachSection.module.css
+        📄 AboutApproachSection.tsx
+        📄 AboutCTASection.module.css
+        📄 AboutCTASection.tsx
+        📄 AboutHeroSection.module.css
+        📄 AboutHeroSection.tsx
+        📄 AboutWhatWeDoSection.module.css
+        📄 AboutWhatWeDoSection.tsx
+        📄 AboutWhyUsSection.module.css
+        📄 AboutWhyUsSection.tsx
       📁 AboutSection
         📄 AboutSection.module.css
         📄 AboutSection.tsx
@@ -102,6 +115,27 @@
       📁 ServicesSection
         📄 ServicesSection.module.css
         📄 ServicesSection.tsx
+      📁 SmartHousePage
+        📄 SmartHouseAutomationSection.module.css
+        📄 SmartHouseAutomationSection.tsx
+        📄 SmartHouseBenefitsSection.module.css
+        📄 SmartHouseBenefitsSection.tsx
+        📄 SmartHouseCTASection.module.css
+        📄 SmartHouseCTASection.tsx
+        📄 SmartHouseForWhomSection.module.css
+        📄 SmartHouseForWhomSection.tsx
+        📄 SmartHouseHeroSection.module.css
+        📄 SmartHouseHeroSection.tsx
+        📄 SmartHouseHowItLooksSection.module.css
+        📄 SmartHouseHowItLooksSection.tsx
+        📄 SmartHouseIntroSection.module.css
+        📄 SmartHouseIntroSection.tsx
+        📄 SmartHouseScenariosSection.module.css
+        📄 SmartHouseScenariosSection.tsx
+        📄 SmartHouseStepsSection.module.css
+        📄 SmartHouseStepsSection.tsx
+        📄 SmartHouseWhatIsSection.module.css
+        📄 SmartHouseWhatIsSection.tsx
     📁 ui
       📁 ArticleCard
         📄 ArticleCard.module.css

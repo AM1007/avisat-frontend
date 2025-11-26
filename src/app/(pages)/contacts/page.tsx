@@ -1,5 +1,11 @@
-import PageUnderConstruction from '@/components/ui/PageUnderConstruction/PageUnderConstruction';
+import ContactsCardsSection from '@/components/sections/ContactsPage/ContactsCardsSection';
+import ContactsHeroSection from '@/components/sections/ContactsPage/ContactsHeroSection';
 
 export default function ContactsPage() {
-  return <PageUnderConstruction />;
+  return (
+    <main>
+      <ContactsHeroSection/>
+      <ContactsCardsSection/>
+    </main>
+  );
 }

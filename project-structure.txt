@@ -89,6 +89,15 @@
       📁 ArticlesSection
         📄 ArticlesSection.module.css
         📄 ArticlesSection.tsx
+      📁 ContactsPage
+        📄 ContactsCardsSection.module.css
+        📄 ContactsCardsSection.tsx
+        📄 ContactsHeroSection.module.css
+        📄 ContactsHeroSection.tsx
+        📄 ContactsHowToSection.module.css
+        📄 ContactsHowToSection.tsx
+        📄 ContactsMapSection.module.css
+        📄 ContactsMapSection.tsx
       📁 ContactsSection
         📄 ContactSection.module.css
         📄 ContactSection.tsx

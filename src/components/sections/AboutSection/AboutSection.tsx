@@ -11,10 +11,10 @@ export default function AboutSection() {
         </h2>
         <div className={styles.contentWrapper}>
           <p className={styles.subtitle}>
-            AViSaT проєктує та впроваджує системи безпеки з 2012 року.
+            <span className={styles.red}>AViSaT</span> проєктує та впроваджує системи безпеки з 2012 року.
           </p>
           <p className={styles.paragraph}>
-            Працюємо “під ключ” — від аналізу загроз до сервісної підтримки.
+            Працюємо <span className={styles.red}>“під ключ”</span> – від аналізу загроз до сервісної підтримки.
           </p>
           <p className={styles.paragraph}>
             Знаємо, як захистити дім, бізнес і нервову систему власника.

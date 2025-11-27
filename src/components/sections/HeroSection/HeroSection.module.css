@@ -134,20 +134,20 @@
 
 @media (min-width: 768px){
  .leftHeroContent{
-  padding-bottom: 48px;
+  padding-bottom: 58px;
  }
 }
 
 @media (min-width: 1024px){
  .leftHeroContent{
-  padding-bottom: 73px;
+  padding-bottom: 74px;
  }
 }
 
 @media (min-width: 1440px){
  .leftHeroContent{ 
   margin-left: 0;
-  padding-bottom: 104px;
+  padding-bottom: 97px;
  }
 }
 

@@ -84,7 +84,7 @@
 @media (min-width: 1024px) {
   .title {
     font-size: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 }
 
@@ -97,18 +97,30 @@
 .list {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px 0;
+  margin: 0 0 20px 0;
+}
+
+@media (min-width: 1440px) {
+  .list {
+    margin-bottom: 32px;
+  }
 }
 
 .listItem {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 
 .listItem:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 1440px) {
+  .listItem {
+    margin-bottom: 12px;
+  }
 }
 
 .bullet {
@@ -128,17 +140,37 @@
   line-height: 1.5;
 }
 
+@media (min-width: 480px) {
+  .listText {
+    font-size: 17px;
+  }
+}
+
+
 @media (min-width: 768px) {
   .listText {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1024px) {
   .listText {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
+
+@media (min-width: 1440px) {
+  .listText {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .listText {
+    font-size: 22px;
+  }
+}
+
 
 .alert {
   display: flex;
@@ -185,7 +217,7 @@
 .alertText {
   font-family: var(--font-nunito), Arial, sans-serif;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
   color: #171717;
   line-height: 1.5;
 }
@@ -193,5 +225,10 @@
 @media (min-width: 768px) {
   .alertText {
     font-size: 14px;
+    
   }
+}
+
+.red{
+  color: #FF0000;
 }

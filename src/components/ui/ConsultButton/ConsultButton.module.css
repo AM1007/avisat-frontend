@@ -31,9 +31,10 @@
 .heroButton {
   position: relative;
   overflow: hidden;
-  padding: 8px 8px 8px 100px;
+  padding: 6px 18px ;
   border: none;
   font-size: 12px;
+  margin-left: 1.25rem; 
   font-family: var(--font-nunito), Arial, sans-serif;
   text-transform: uppercase;
   color: #000000;
@@ -53,17 +54,13 @@
   transform: scale(0.98);
 }
 
-@media (min-width: 480px) {
-  .heroButton {
-    font-size: 16px;
-    padding: 12px 12px 12px 140px;
-  }
-}
+
 
 @media (min-width: 768px) {
   .heroButton {
     font-size: 12px;
     padding: 8px 24px;
+    margin-left: 0; 
   }
 }
 

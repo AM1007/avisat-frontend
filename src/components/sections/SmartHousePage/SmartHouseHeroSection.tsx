@@ -24,7 +24,7 @@ export default function SmartHouseHeroSection() {
           </p>
           <p className={styles.description}>
             Система &quot;розумний дім&quot; — це не про майбутнє.<br/>
-            Це про комфорт, безпеку і контроль вже сьогодні.
+            Це про комфорт, безпеку і контроль <span className={styles.bold}>вже сьогодні</span>.
           </p>
           <div className={styles.buttons}>
             <ConsultButton variant="hero" className={styles.consultButton} />

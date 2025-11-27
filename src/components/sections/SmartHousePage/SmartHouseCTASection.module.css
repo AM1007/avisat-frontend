@@ -208,19 +208,19 @@
 
 @media (min-width: 768px){
   .buttons{
-  margin-top: 65px;
+  margin-top: 60px;
  }
 }
 
 @media (min-width: 1024px){
   .buttons{
-  margin-top: 100px;
+  margin-top: 98px;
  }
 }
 
 @media (min-width: 1440px){
   .buttons{
-  margin-top: 110px;
+  margin-top: 105px;
  }
 }
 

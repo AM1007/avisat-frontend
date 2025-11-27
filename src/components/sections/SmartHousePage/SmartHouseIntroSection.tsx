@@ -11,7 +11,7 @@ export default function SmartHouseIntroSection() {
             зі смартфона або голосом.
           </p>
           <p className={styles.text}>
-            <span className={styles.highlight}>АвіСат</span> створює розумні простори, 
+            <span className={styles.highlight}>AViSat</span> створює розумні простори, 
             де все налаштовано під ваш стиль життя.
           </p>
         </div>

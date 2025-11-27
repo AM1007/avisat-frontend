@@ -30,7 +30,6 @@
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 
@@ -104,7 +103,6 @@
 .image {
   object-fit: cover;
   filter: grayscale(100%);
-  border: 1px solid blue;
 }
 
 .content {

@@ -15,9 +15,15 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .section {
+    padding: 160px 0 20px;
+  }
+}
+
 @media (min-width: 1440px) {
   .section {
-    padding: 200px 0 30px;
+    padding: 220px 0 20px;
   }
 }
 

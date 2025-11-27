@@ -14,7 +14,7 @@ export default function HeroSection() {
               <span className={styles.titleLarge}>Комплексні рішення</span>
               <span className={styles.titleSmall}>з безпеки та автоматизації</span>
             </h1>
-          <ConsultButton variant="hero" />
+          <ConsultButton variant="hero"/>
           </div>
         </div>
         <div className={styles.rightHero}>

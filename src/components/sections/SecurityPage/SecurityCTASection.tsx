@@ -18,10 +18,10 @@ export default function SecurityCTASection() {
       <Container>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>
-            Безпека починається не з тривоги, <br/> а з рішення
+            Безпека починається не з тривоги, <br/><span className={styles.desision}>а з рішення</span> 
           </h2>
           <p className={styles.description}>
-            Зробіть свій вибір зараз — і будьте спокійні за дім, бізнес і близьких.
+            Зробіть свій вибір зараз і будьте спокійні за дім, бізнес і близьких
           </p>
 
           <div className={styles.buttons}>

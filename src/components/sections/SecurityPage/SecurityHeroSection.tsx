@@ -20,24 +20,25 @@ export default function SecurityHeroSection() {
         <div className={styles.content}>
           <h1 className={styles.title}>Системи безпеки</h1>
           <p className={styles.subtitle}>
-            Захист — не розкіш, а база для спокійного життя.
+            Захист — не розкіш, а база для спокійного життя
           </p>
           <p className={styles.description}>
-            Це система, яка передбачає ризики, реагує миттєво та інтегрується у ваш побут. У сучасному світі безпека — це не просто сигналізація чи кілька камер. 
+            Це система, яка передбачає ризики, реагує миттєво та інтегрується у ваш побут.<br/> У сучасному світі безпека — це не просто сигналізація чи кілька камер. 
           </p>
 
-          <p className={styles.description}>
-            <span className={styles.company}>АвіСат</span> створює такі системи. 
+          <p className={styles.subtitle}>
+            <span className={styles.company}>AViSaT</span> створює такі системи
           </p>
 
           <p className={styles.description}>
             Ми працюємо для приватних осіб, бізнесу та організацій, 
-            які розуміють: <br/> <span className={styles.bold}>дешевше запобігти, ніж відновлювати.</span>
+            які розуміють: 
           </p>
 
-          <p className={styles.description}>
-            
+          <p className={`${styles.description} ${styles.lastDescription}`}>
+           дешевше запобігти, ніж відновлювати
           </p>
+
           <div className={styles.buttons}>
             <ConsultButton variant="hero" className={styles.consultButton} />
           </div>

@@ -52,7 +52,7 @@ export default function SecurityWhenNeededSection() {
               <div className={styles.alertContent}>
                 <p className={styles.alertTitle}>Кожен день без захисту — ризик.</p>
                 <p className={styles.alertText}>
-                  Ми пропонуємо швидкий аудит об&apos;єкта і готове рішення вже за 48 годин.
+                  Ми пропонуємо швидкий аудит об&apos;єкта і готове рішення вже за <span className={styles.red}>48 годин</span>.
                 </p>
               </div>
             </div>

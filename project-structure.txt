@@ -1,3 +1,5 @@
+📄 .env.example
+📄 .env.local
 📄 .gitignore
 📄 eslint.config.mjs
 📄 LICENSE
@@ -65,6 +67,9 @@
         📄 page.tsx
       📁 smart-house
         📄 page.tsx
+    📁 api
+      📁 contact
+        📄 route.ts
     📄 favicon.ico
     📄 globals.css
     📄 layout.tsx
@@ -202,7 +207,11 @@
     📄 servicesLinks.ts
   📁 fonts
     📄 index.js
+  📁 lib
+    📄 toast.ts
   📁 styles
     📄 variables.css
+  📁 types
+    📄 izitoast.d.ts
 📄 tailwind.config.js
 📄 tsconfig.json

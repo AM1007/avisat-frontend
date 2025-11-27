@@ -51,28 +51,62 @@
 
 .subtitle {
   font-family: var(--font-nunito), Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
-  color: #6b7280;
+  color: #171717;
   margin-bottom: 12px;
 }
 
 @media (min-width: 768px) {
   .subtitle {
-    font-size: 18px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .subtitle {
+    font-size: 22px;
   }
 }
 
 .description {
   font-family: var(--font-nunito), Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
-  color: #6b7280;
+  color: #171717;
   line-height: 1.6;
+}
+
+@media (min-width: 480px) {
+  .description {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 768px) {
   .description {
-    font-size: 15px;
+    font-size: 18px;
   }
+}
+
+@media (min-width: 1024px) {
+  .description {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .description {
+    font-size: 22px;
+  }
+}
+
+.red{
+  color: red;
 }

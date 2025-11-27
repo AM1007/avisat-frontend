@@ -122,28 +122,25 @@
   }
 }
 
-@media (min-width: 768px) {
-  .buttons {
-    gap: 20px;
-  }
+.consultButton{
+  text-align: center;
+  padding: 8px 24px;
 }
 
-.consultButton {
-  width: 100%;
+@media (min-width: 480px){
+  .consultButton{
+  padding: 10px 30px;
+ }
 }
 
-@media (min-width: 480px) {
-  .consultButton {
-    width: auto;
-  }
+@media (min-width: 768px){
+  .consultButton{
+  padding: 12px 36px;
+ }
 }
 
-.backButton {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
-}
-
-.backButton:hover {
-  border-color: #ffffff;
-  color: #ffffff;
+@media (min-width: 1024px){
+  .consultButton{
+  padding: 14px 42px;
+ }
 }

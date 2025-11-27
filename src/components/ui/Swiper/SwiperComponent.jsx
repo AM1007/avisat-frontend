@@ -13,23 +13,20 @@ import articleLinks from "../../../data/articleLinks";
 
 const SwiperComponent = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [direction, setDirection] = useState('forward'); // 'forward' или 'backward'
+  const [direction, setDirection] = useState('forward');
 
   const handleSlideChange = (swiper) => {
     const newIndex = swiper.realIndex;
     const oldIndex = activeIndex;
     
-    // Определяем направление движения с учетом зацикленности
     let newDirection = 'forward';
     if (newIndex < oldIndex) {
-      // Проверяем, не переход ли это с последнего на первый (зацикленность вперед)
       if (oldIndex === articleLinks.length - 1 && newIndex === 0) {
         newDirection = 'forward';
       } else {
         newDirection = 'backward';
       }
     } else if (newIndex > oldIndex) {
-      // Проверяем, не переход ли это с первого на последний (зацикленность назад)
       if (oldIndex === 0 && newIndex === articleLinks.length - 1) {
         newDirection = 'backward';
       } else {
@@ -59,7 +56,6 @@ const SwiperComponent = () => {
         }}
       >
         {articleLinks.map((article, index) => {
-          // Вычисляем позицию карточки на экране относительно активного слайда
           let screenPosition = (index - activeIndex + articleLinks.length) % articleLinks.length;
           
           return (
@@ -68,9 +64,9 @@ const SwiperComponent = () => {
                 title={article.title}
                 image={article.image}
                 url={article.url}
-                index={index} // Оставляем оригинальный индекс для ключа
-                screenPosition={screenPosition} // Добавляем новый пропс для позиции на экране
-                direction={direction} // Передаем направление для анимации
+                index={index}
+                screenPosition={screenPosition}
+                direction={direction}
               />
             </SwiperSlide>
           );

@@ -179,10 +179,25 @@
   }
 }
 
-.consultButton {
-  background-color: #FF0000;
+.consultButton{
+  text-align: center;
+  padding: 8px 24px;
 }
 
-.consultButton:hover {
-  background-color: #dc2626;
+@media (min-width: 480px){
+  .consultButton{
+  padding: 10px 30px;
+ }
+}
+
+@media (min-width: 768px){
+  .consultButton{
+  padding: 12px 36px;
+ }
+}
+
+@media (min-width: 1024px){
+  .consultButton{
+  padding: 14px 42px;
+ }
 }

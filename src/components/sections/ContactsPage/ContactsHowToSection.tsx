@@ -1,5 +1,6 @@
 import Container from '@/components/ui/Container/Container';
 import styles from './ContactsHowToSection.module.css';
+import ConsultButton from '@/components/ui/ConsultButton/ConsultButton';
 
 const contactMethods = [
   'Зателефонуйте напряму',
@@ -21,6 +22,10 @@ export default function ContactsHowToSection() {
               </li>
             ))}
           </ul>
+
+          <div className={styles.buttons}>
+            <ConsultButton variant="contact" className={styles.consultButton} />
+          </div>
         </div>
       </Container>
     </section>

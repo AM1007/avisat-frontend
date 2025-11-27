@@ -31,7 +31,10 @@ export default function ConsultButton({
       onClick={handleClick}
       className={`${buttonClass} ${className}`}
     >
-      ОТРИМАТИ КОНСУЛЬТАЦІЮ
+      <span className={styles.textContainer}>
+        <span className={styles.defaultText}>Залишити запит</span>
+        <span className={styles.hoverText}>Готові діяти?</span>
+      </span>
     </button>
   );
 }

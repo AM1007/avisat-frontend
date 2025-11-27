@@ -1,17 +1,18 @@
 .section {
-  padding: 40px 0;
-  background-color: #F5F5F5;
+  padding: 40px 0 0;
+  background-color: #fdfdfd;
+  border-top: 1px solid #e5e7eb;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 60px 0 0;
   }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding: 80px 0;
+    padding: 80px 0 0;
   }
 }
 
@@ -29,7 +30,7 @@
 @media (min-width: 768px) {
   .wrapper {
     flex-direction: row;
-    gap: 40px;
+    gap: 10px;
     align-items: flex-start;
   }
 }
@@ -51,19 +52,19 @@
 
 @media (min-width: 768px) {
   .imageWrapper {
-    width: 240px;
+    width: 330px;
   }
 }
 
 @media (min-width: 1024px) {
   .imageWrapper {
-    width: 280px;
+    width: 370px;
   }
 }
 
 @media (min-width: 1440px) {
   .imageWrapper {
-    width: 320px;
+    width: 372px;
   }
 }
 

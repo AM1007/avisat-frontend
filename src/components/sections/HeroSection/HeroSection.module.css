@@ -124,6 +124,7 @@
 
 .leftHeroContent{
   padding-bottom: 17px;
+  border: 1px solid red;
 }
 
 @media (min-width: 480px){
@@ -189,18 +190,25 @@
 }
 
 .titleLarge{
-  font-size: 20px;
+  font-size: 32px;
 }
 
 @media (min-width: 480px){
   .titleLarge{
-    font-size: 25px;
+    font-size: 36px;
+  }
+}
+
+
+@media (min-width: 768px){
+  .titleLarge{
+    font-size: 28px;
   }
 }
 
 @media (min-width: 1024px){
   .titleLarge{
-    font-size: 32px;
+    font-size: 38px;
     line-height: 1;
   }
 }
@@ -220,18 +228,24 @@
 }
 
 .titleSmall{
-  font-size: 15px;
+  font-size: 20px;
 }
 
 @media (min-width: 480px){
   .titleSmall{
-    font-size: 19px;
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 768px){
+  .titleSmall{
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1024px){
   .titleSmall {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 

@@ -3,6 +3,7 @@
 📄 LICENSE
 📄 next-env.d.ts
 📄 next.config.ts
+📄 package-lock.json
 📄 package.json
 📄 postcss.config.mjs
 📄 project-structure.txt
@@ -48,6 +49,15 @@
     📁 (pages)
       📁 about
         📄 page.tsx
+      📁 articles
+        📁 perimeter-security
+          📄 page.tsx
+        📁 security-systems
+          📄 page.tsx
+        📁 smart-house
+          📄 page.tsx
+        📁 video-surveillance
+          📄 page.tsx
       📁 contacts
         📄 page.tsx
       📄 layout.tsx
@@ -149,6 +159,9 @@
       📁 ArticleCard
         📄 ArticleCard.module.css
         📄 ArticleCard.tsx
+      📁 ArticleLayout
+        📄 ArticleLayout.module.css
+        📄 ArticleLayout.tsx
       📁 BackButton
         📄 BackButton.module.css
         📄 BackButton.tsx

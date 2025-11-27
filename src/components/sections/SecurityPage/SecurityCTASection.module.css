@@ -57,6 +57,7 @@
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
   text-wrap: balance;
+  text-transform: uppercase;
 }
 
 @media (min-width: 480px) {
@@ -143,8 +144,4 @@
   .consultButton{
   padding: 14px 42px;
  }
-}
-
-.desision{
-  text-transform: uppercase;
 }

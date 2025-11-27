@@ -24,7 +24,7 @@ export default function SmartHouseCTASection() {
               </p>
               
               <div className={styles.buttons}>
-                <ConsultButton variant="hero" className={styles.consultButton} />
+                <ConsultButton variant="contact" className={styles.consultButton} />
                 {/* <BackButton href="/" className={styles.backButton} /> */}
               </div>
             </div>

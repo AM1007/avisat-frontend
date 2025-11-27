@@ -10,15 +10,14 @@ export default function AboutSection() {
           ПРО КОМПАНІЮ
         </h2>
         <div className={styles.contentWrapper}>
-          <p className={styles.paragraph}>
-            <span className={styles.paragraphSelection}>АвіСат</span> - компанія з багаторічним
-            досвідом у сфері систем безпеки та автоматизації.
+          <p className={styles.subtitle}>
+            AViSaT проєктує та впроваджує системи безпеки з 2012 року.
           </p>
           <p className={styles.paragraph}>
-            Ми пропунуємо комплексний підхід:
+            Працюємо “під ключ” — від аналізу загроз до сервісної підтримки.
           </p>
           <p className={styles.paragraph}>
-            <span className={styles.paragraphSelection}>від проєктування до впровадження та обслуговування </span> систем будь-якої складності 
+            Знаємо, як захистити дім, бізнес і нервову систему власника.
           </p>
         </div>
         </div>

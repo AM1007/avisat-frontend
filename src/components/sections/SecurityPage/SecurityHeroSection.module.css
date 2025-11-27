@@ -159,10 +159,10 @@
 
 
 .buttons{
-display: flex;
-align-items: center;
-justify-content: center;
-  margin-top: 30px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 30px;
 }
 
 @media (min-width: 768px){
@@ -175,17 +175,23 @@ justify-content: center;
 
 .consultButton{
   text-align: center;
-  padding: 8px;
+  padding: 8px 24px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 480px){
   .consultButton{
-  padding: 12px;
+  padding: 10px 30px;
  }
 }
 
 @media (min-width: 768px){
   .consultButton{
-  padding: 27px 32px;
+  padding: 12px 36px;
+ }
+}
+
+@media (min-width: 1024px){
+  .consultButton{
+  padding: 14px 42px;
  }
 }

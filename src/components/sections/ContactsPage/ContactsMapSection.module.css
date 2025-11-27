@@ -56,26 +56,29 @@
 
 .mapWrapper {
   width: 100%;
+  max-width: 900px;
   height: 280px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
 }
 
 @media (min-width: 480px) {
   .mapWrapper {
+    width: 440px;
     height: 320px;
   }
 }
 
 @media (min-width: 768px) {
   .mapWrapper {
+    width: 720px;
     height: 350px;
   }
 }
 
 @media (min-width: 1024px) {
   .mapWrapper {
+    width: 920px;
     height: 400px;
   }
 }

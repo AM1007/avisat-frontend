@@ -4,22 +4,27 @@
   width: 100%;
 }
 
-.imageContainer{
+.imageContainer {
   position: relative;
   width: 100%;
   height: 250px;
   overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.serviceCard:hover .imageContainer {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 480px) {
   .imageContainer {
-    height: 300px ;
+    height: 300px;
   }
 }
 
 @media (min-width: 768px) {
   .imageContainer {
-    height: 280px ;
+    height: 280px;
   }
 }
 
@@ -47,42 +52,35 @@
   object-fit: cover;
 }
 
-.cardContent{
-  padding: 8px 0;
+.cardContent {
+  padding: 8px 0 20px;
 }
 
 @media (min-width: 768px) {
-  .cardContent{
-  height: 80px;
+  .cardContent {
+    height: 80px;
   }
 }
 
-@media (min-width: 768px) {
-  .cardContent{
-  height: 80px;
-  }
-}
-
-
-.imageTitle{
+.imageTitle {
   font-family: var(--font-nunito), Arial, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  color: #FF0000; 
+  color: #FF0000;
   line-height: 1.5;
 }
 
 @media (min-width: 768px) {
   .imageTitle {
-    font-size: 18px;
+    font-size: 22px;
   }
-  
+
   .serviceCard:nth-child(even) .imageTitle {
     text-align: left;
   }
-  
+
   .serviceCard:nth-child(odd) .imageTitle {
     text-align: right;
   }
@@ -90,46 +88,32 @@
 
 @media (min-width: 1024px) {
   .imageTitle {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .serviceCard:nth-child(even) .imageTitle {
-    text-align: center
+    text-align: center;
   }
-  
+
   .serviceCard:nth-child(odd) .imageTitle {
     text-align: center;
   }
 }
 
-@media (min-width: 1024px) {
-  .imageTitle {
-    font-size: 19px;
-  }
-}
 @media (min-width: 1440px) {
   .imageTitle {
     font-size: 23px;
   }
 }
 
-
-
-.cardDescription{
+.cardDescription {
   font-family: var(--font-nunito), Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
-  color: #000000; 
+  color: #000000;
   text-align: center;
 }
-
-@media (min-width: 480px) {
-  .cardDescription {
-    font-size: 16px;
-  }
-}
-
 
 @media (min-width: 768px) {
   .cardDescription {
@@ -139,7 +123,7 @@
   .serviceCard:nth-child(even) .cardDescription {
     text-align: left;
   }
-  
+
   .serviceCard:nth-child(odd) .cardDescription {
     text-align: right;
   }
@@ -154,7 +138,7 @@
   .serviceCard:nth-child(even) .cardDescription {
     text-align: center;
   }
-  
+
   .serviceCard:nth-child(odd) .cardDescription {
     text-align: center;
   }
@@ -165,6 +149,7 @@
     font-size: 15px;
   }
 }
+
 @media (min-width: 1930px) {
   .cardDescription {
     font-size: 19px;

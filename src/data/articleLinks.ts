@@ -15,13 +15,13 @@ const articleLinks = [
       id: 3,
       title: "ПОМИЛКИ БЕЗПЕКИ",
       image: "/images/07_article.png",
-      url: "/articles/video-surveillance",
+      url: "/articles/security-systems",
     },
     {
       id: 4,
       title: "ПІДГОТОВКА ДОМУ ПІД СМАРТ", 
       image: "/images/08_article.png",
-      url: "/articles/perimeter-security",
+      url: "/articles/smart-house",
     },
   ]
 

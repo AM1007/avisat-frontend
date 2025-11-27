@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "izitoast/dist/css/iziToast.min.css";
 
 :root {
   --background: #F5F5F5;

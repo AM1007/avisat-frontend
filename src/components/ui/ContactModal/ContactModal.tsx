@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import Modal from '../Modal/Modal';
 import { useModal } from '@/context/ModalContext';
+import toast from '@/lib/toast';
 import styles from './ContactModal.module.css';
 
 interface FormData {
@@ -65,7 +66,12 @@ export default function ContactModal() {
     }
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const resetForm = () => {
+    setFormData({ name: '', email: '', message: '' });
+    setErrors({});
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -74,24 +80,34 @@ export default function ContactModal() {
 
     setIsSubmitting(true);
 
-    console.log('Form submitted:', {
-      to: 'info@avisat.com.ua',
-      ...formData
-    });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setTimeout(() => {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast.success('Ми зв\'яжемося з вами найближчим часом', 'Заявку надіслано');
+        resetForm();
+        closeModal();
+      } else {
+        toast.error(result.error || 'Не вдалося надіслати повідомлення');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      toast.error('Перевірте з\'єднання з інтернетом', 'Помилка мережі');
+    } finally {
       setIsSubmitting(false);
-      alert('Дякуємо! Ваше повідомлення надіслано.');
-      
-      setFormData({ name: '', email: '', message: '' });
-      setErrors({});
-      closeModal();
-    }, 1000);
+    }
   };
 
   const handleClose = () => {
-    setFormData({ name: '', email: '', message: '' });
-    setErrors({});
+    resetForm();
     closeModal();
   };
 
@@ -103,10 +119,10 @@ export default function ContactModal() {
     >
       <div className={styles.formWrapper}>
         <p className={styles.description}>
-          Заповніть форму, і наш фахівець звяжеться з вами найближчим часом
+          Заповніть форму, і наш фахівець зв&#39;яжеться з вами найближчим часом
         </p>
 
-        <div className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.fieldGroup}>
             <label htmlFor="name" className={styles.label}>
               Ім&apos;я та прізвище *
@@ -125,6 +141,7 @@ export default function ContactModal() {
               <span className={styles.error}>{errors.name}</span>
             )}
           </div>
+
           <div className={styles.fieldGroup}>
             <label htmlFor="email" className={styles.label}>
               Email *
@@ -164,14 +181,13 @@ export default function ContactModal() {
           </div>
 
           <button
-            type="button"
-            onClick={handleSubmit}
+            type="submit"
             disabled={isSubmitting}
             className={styles.submitButton}
           >
             {isSubmitting ? 'Відправка...' : 'Відправити'}
           </button>
-        </div>
+        </form>
       </div>
     </Modal>
   );

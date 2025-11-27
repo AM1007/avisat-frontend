@@ -1,15 +1,26 @@
+'use client';
+
 import Image from "next/image";
 import Container from "@/components/ui/Container/Container";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className={styles.footer}>
       <Container>
         <div className={styles.footerContent}>
           <div className={styles.leftSection}>
 
-            <div className={styles.logoContainer}>
+            <button 
+              type="button"
+              onClick={scrollToTop}
+              className={styles.logoButton}
+              aria-label="Прокрутити на початок сторінки"
+            >
               <div className={styles.logoMobile}>
                 <Image
                   src="/icons/logo-mobile.svg"
@@ -28,7 +39,7 @@ export default function Footer() {
                   priority
                 />
               </div>
-            </div>
+            </button>
 
           </div>
 

@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 
-// Подключение Nunito как переменного шрифта
 export const nunito = localFont({
   src: [
     {
@@ -8,10 +7,9 @@ export const nunito = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-nunito", // CSS переменная для использования
+  variable: "--font-nunito",
 });
 
-// Подключение Strong Regular
 export const strong = localFont({
   src: "../../public/fonts/Strong-Regular.ttf",
   variable: "--font-strong",

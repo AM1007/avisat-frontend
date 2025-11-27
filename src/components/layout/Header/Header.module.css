@@ -1,4 +1,4 @@
-.mobileHeader{
+.mobileHeader {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,13 +9,13 @@
   background-color: transparent;
 }
 
-@media (min-width: 768px){
-  .mobileHeader{
+@media (min-width: 768px) {
+  .mobileHeader {
     display: none;
   }
 }
 
-.mobileContainer{
+.mobileContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,48 +31,42 @@
   pointer-events: none;
 }
 
-.flagButtonContainer{
+.flagButtonContainer {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
 
-.desktopHeader{
+.desktopHeader {
   display: none;
 }
 
-@media (min-width: 768px){
-  .desktopHeader{
+@media (min-width: 768px) {
+  .desktopHeader {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
     display: flex;
     width: 100%;
-    padding: 0 24px;
-}
-}
-
-@media (min-width: 768px){
-  .desktopHeader{
     padding: 0 40px;
   }
 }
 
-@media (min-width: 1440px){
-  .desktopHeader{
+@media (min-width: 1440px) {
+  .desktopHeader {
     padding: 0 40px;
   }
 }
 
-.leftHeader{
+.leftHeader {
   display: flex;
   justify-content: flex-end;
   width: 50%;
   background-color: transparent;
 }
 
-.leftContent{
+.leftContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,26 +74,27 @@
   max-width: 960px;
 }
 
-@media (min-width: 1440px){
-  .leftContent{
+@media (min-width: 1440px) {
+  .leftContent {
     padding: 35px 0;
   }
 }
 
-.logoDesktop{
+.logoDesktop {
   display: none;
 }
 
-@media (min-width: 1440px){
-  .logoMobileInDesktop{
+@media (min-width: 1440px) {
+  .logoMobileInDesktop {
     display: none;
   }
-  .logoDesktop{
-  display: block;
-}
+  .logoDesktop {
+    display: block;
+  }
 }
 
-.leftNavigation, .rightNavigation {
+.leftNavigation,
+.rightNavigation {
   display: flex;
   justify-content: space-between;
 }
@@ -120,39 +115,39 @@
   transition: color 0.2s;
 }
 
-@media (min-width: 768px){
-  .navLink{
+@media (min-width: 768px) {
+  .navLink {
     font-size: 12px;
     padding: 25px 20px;
   }
 }
 
-@media (min-width: 1024px){
-  .navLink{
+@media (min-width: 1024px) {
+  .navLink {
     padding: 25px 20px;
   }
 }
 
-@media (min-width: 1440px){
-  .navLink{
+@media (min-width: 1440px) {
+  .navLink {
     padding: 25px 20px;
     font-size: 17px;
   }
 }
 
-@media (min-width: 1930px){
-  .navLink{
+@media (min-width: 1930px) {
+  .navLink {
     padding: 25px 30px;
     font-size: 20px;
   }
 }
 
 .navLink:hover {
-  color: #ff0000; 
+  color: #ff0000;
 }
 
 .navLinkLight {
-  color: #171717; 
+  color: #171717;
 }
 
 .navLinkLight:hover {
@@ -172,21 +167,21 @@
 
 .navLinkLight:not(:last-child)::after {
   background-color: #171717;
-} 
+}
 
 .navLinkActive {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .navLinkLight.navLinkActive {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .rightHeader {
   display: flex;
   justify-content: space-between;
   width: 50%;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .rightContent {
@@ -194,7 +189,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 960px; 
+  max-width: 960px;
 }
 
 .flagDesktopContainer {
@@ -215,8 +210,8 @@
 }
 
 @media (min-width: 1440px) {
-  .flagDesktopSmall{
-  display: none;
+  .flagDesktopSmall {
+    display: none;
   }
 }
 
@@ -237,22 +232,42 @@
 }
 
 @media (min-width: 1440px) {
-.phoneLink {
-  display: block;
-  padding: 16px 58px;
-  font-family: var(--font-nunito) ;
-  font-size: 20px;
-  outline: 1px solid #ff0000;
-  background-color: #ff0000;
-  color: #F5F5F5;
-}
+  .phoneLink {
+    display: block;
+    padding: 16px 58px;
+    font-family: var(--font-nunito);
+    font-size: 20px;
+    outline: 1px solid #ff0000;
+    background-color: #ff0000;
+    color: #f5f5f5;
+  }
 }
 
-.flagPhoneContainer{
+.flagPhoneContainer {
   display: flex;
   align-items: center;
 }
 
+.homeLinkDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .homeLinkDesktop {
+    display: inline-flex;
+  }
+  
+  .homeLinkDesktop::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 1px;
+    background-color: white;
+  }
+}
 
 @media (min-width: 768px) {
   .navLinkDark {
@@ -279,6 +294,43 @@
   }
 
   .navLinkDark.navLinkActive {
-    color: #FF0000;
+    color: #ff0000;
+  }
+  
+  .navLinkDark.homeLinkDesktop::after {
+    background-color: #171717;
+  }
+}
+
+.navLinkHero {
+  color: #ffffff;
+}
+
+.navLinkHero:hover {
+  color: #ff0000;
+}
+
+.navLinkHero:not(:last-child)::after {
+  background-color: #ffffff;
+}
+
+.navLinkHero:last-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 25px;
+  width: 1px;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+}
+
+.navLinkHero.navLinkActive {
+  color: #ff0000;
+}
+
+@media (min-width: 1024px) {
+  .navLinkHero.homeLinkDesktop::after {
+    background-color: #ffffff;
   }
 }

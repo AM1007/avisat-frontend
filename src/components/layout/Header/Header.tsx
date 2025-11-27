@@ -14,16 +14,47 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   
-  const isNotHome = pathname !== '/';
+  const isHomePage = pathname === '/';
+  const isHeroPage = pathname === '/security' || pathname === '/smart-house';
+  
+  // Логика выбора логотипа:
+  // - Главная и hero-страницы (security, smart-house) — светлый логотип
+  // - Остальные страницы — тёмный логотип
+  const useLightLogo = isHomePage || isHeroPage;
   
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const filteredNavLinks = navLinks.filter(link => link.id !== 1);
+  // Пункт "Головна" (id: 1) для десктопа на всех страницах кроме главной
+  const homeLink = navLinks.find(link => link.id === 1);
   
-  const leftNavLinks = filteredNavLinks.filter(link => [2, 3].includes(link.id)); 
-  const rightNavLinks = filteredNavLinks.filter(link => [4, 5].includes(link.id)); 
+  // Левая навигация: на десктопе добавляем "Головна" в начало (кроме главной страницы)
+  const baseLeftNavLinks = navLinks.filter(link => [2, 3].includes(link.id));
+  const leftNavLinks = !isHomePage && homeLink 
+    ? [homeLink, ...baseLeftNavLinks] 
+    : baseLeftNavLinks;
+  
+  const rightNavLinks = navLinks.filter(link => [4, 5].includes(link.id));
+
+  // Определение класса для левых пунктов меню
+  const getLeftNavLinkClass = (href: string) => {
+    const baseClass = styles.navLink;
+    const activeClass = pathname === href ? styles.navLinkActive : '';
+    
+    if (isHomePage) {
+      // Главная — белый текст (по умолчанию)
+      return `${baseClass} ${activeClass}`;
+    }
+    
+    if (isHeroPage) {
+      // Hero-страницы — белый текст
+      return `${baseClass} ${styles.navLinkHero} ${activeClass}`;
+    }
+    
+    // Остальные страницы — тёмный текст
+    return `${baseClass} ${styles.navLinkDark} ${activeClass}`;
+  };
 
   return (
     <header className={styles.header}>
@@ -32,7 +63,7 @@ export default function Header() {
           <div className={styles.mobileContainer}>
             <Link href="/" className={`${styles.logoLink} ${mobileMenuOpen ? styles.logoHidden : ''}`}>
               <Image
-                src={isNotHome ? "/icons/logo-mobile-dark.svg" : "/icons/logo-mobile.svg"}
+                src={useLightLogo ? "/icons/logo-mobile.svg" : "/icons/logo-mobile-dark.svg"}
                 alt="АвіSat logo"
                 width={70}
                 height={28}
@@ -71,7 +102,7 @@ export default function Header() {
                 <Link href="/">
                   <div className={styles.logoMobileInDesktop}>
                     <Image
-                      src={isNotHome ? "/icons/logo-mobile-dark.svg" : "/icons/logo-mobile.svg"}
+                      src={useLightLogo ? "/icons/logo-mobile.svg" : "/icons/logo-mobile-dark.svg"}
                       alt="АвіSat logo"
                       width={70}
                       height={28}
@@ -80,7 +111,7 @@ export default function Header() {
                   </div>
                   <div className={styles.logoDesktop}>
                     <Image
-                      src={isNotHome ? "/icons/logo-desktop-dark.svg" : "/icons/logo-desktop.svg"}
+                      src={useLightLogo ? "/icons/logo-desktop.svg" : "/icons/logo-desktop-dark.svg"}
                       alt="АвіSat logo"
                       width={213}
                       height={80}
@@ -96,7 +127,7 @@ export default function Header() {
                     <Link 
                       key={id}
                       href={href} 
-                      className={`${styles.navLink} ${isNotHome ? styles.navLinkDark : ''} ${pathname === href ? styles.navLinkActive : ''}`}
+                      className={`${getLeftNavLinkClass(href)} ${id === 1 ? styles.homeLinkDesktop : ''}`}
                     >
                       {label}
                     </Link>
@@ -114,7 +145,7 @@ export default function Header() {
                     <Link 
                       key={id}
                       href={href} 
-                      className={`${styles.navLink} ${styles.navLinkLight} ${pathname === href ? styles.navLinkActive : ''}`}
+                      className={`${styles.navLink} ${isHeroPage ? styles.navLinkHero : styles.navLinkLight} ${pathname === href ? styles.navLinkActive : ''}`}
                     >
                       {label}
                     </Link>
@@ -157,6 +188,3 @@ export default function Header() {
     </header>
   );
 }
-
-
-

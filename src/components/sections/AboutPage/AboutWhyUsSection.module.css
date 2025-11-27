@@ -1,17 +1,17 @@
 .section {
-  padding: 40px 0;
+  padding: 10px 0 40px;
   background-color: #fdfdfd;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 30px 0 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding: 80px 0;
+    padding: 40px 0 80px;
   }
 }
 

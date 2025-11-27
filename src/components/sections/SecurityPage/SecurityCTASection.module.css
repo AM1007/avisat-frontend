@@ -54,7 +54,7 @@
   font-family: var(--font-nunito), Arial, sans-serif;
   font-size: 26px;
   font-weight: 700;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
   text-wrap: balance;
 }
@@ -88,7 +88,7 @@
   font-family: var(--font-nunito), Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 32px;
 }
@@ -102,7 +102,7 @@
 
 @media (min-width: 1024px) {
   .description {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -143,4 +143,8 @@
   .consultButton{
   padding: 14px 42px;
  }
+}
+
+.desision{
+  text-transform: uppercase;
 }

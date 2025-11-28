@@ -126,6 +126,7 @@
 .consultButton{
   text-align: center;
   padding: 8px 24px;
+  margin-left: 0;
 }
 
 @media (min-width: 480px){

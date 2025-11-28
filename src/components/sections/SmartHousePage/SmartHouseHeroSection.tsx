@@ -23,7 +23,7 @@ export default function SmartHouseHeroSection() {
             Дім, який працює замість вас.
           </p>
           <p className={styles.description}>
-            Система &quot;розумний дім&quot; — це не про майбутнє.<br/>
+            Система &quot;розумний дім&quot; – це не про майбутнє.<br/>
             Це про комфорт, безпеку і контроль <span className={styles.bold}>вже сьогодні</span>.
           </p>
           <div className={styles.buttons}>

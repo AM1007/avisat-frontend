@@ -131,7 +131,7 @@ export default function SmartHouseForWhomSection() {
           <div className={styles.footer}>
             <p className={styles.footerText}>
               Якщо ви хочете <span className={styles.footerHighlight}>менше думати про побут</span> і{' '}
-              <span className={styles.footerHighlight}>більше керувати своїм часом</span> — це рішення для вас.
+              <span className={styles.footerHighlight}>більше керувати своїм часом</span> – це рішення для вас.
             </p>
           </div>
         </div>

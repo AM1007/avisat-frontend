@@ -12,7 +12,7 @@ export default function SmartHouseCTASection() {
           <div className={styles.grid}>
             <div className={styles.content}>
               <h2 className={styles.title}>
-                Розумний дім — це не розкіш, це нова норма
+                Розумний дім – це не розкіш, це нова норма
               </h2>
               <p className={styles.description}>
                 Системи автоматизації вже стали стандартом у багатьох країнах. 
@@ -20,7 +20,7 @@ export default function SmartHouseCTASection() {
                 це доступно, швидко, вигідно.
               </p>
               <p className={`${styles.description} ${styles.highlight}`}>
-                Почніть з одного сценарію — і не захочете повертатись назад.
+                Почніть з одного сценарію – і не захочете повертатись назад.
               </p>
               
               <div className={styles.buttons}>

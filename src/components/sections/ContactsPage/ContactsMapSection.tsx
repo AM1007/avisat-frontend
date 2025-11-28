@@ -16,7 +16,7 @@ export default function ContactsMapSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="AViSaT — просп. Академіка Палладіна, 46/2, Київ"
+              title="AViSaT – просп. Академіка Палладіна, 46/2, Київ"
               className={styles.iframe}
             />
           </div>

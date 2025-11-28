@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 interface ContactFormData {
   name: string;
@@ -31,17 +32,10 @@ export async function POST(request: NextRequest) {
 
     const { name, email, message } = body;
 
-    // ============================================
-    // SMTP ЗАГЛУШКА — раскомментировать когда будут креды
-    // ============================================
-    
-    /*
-    import nodemailer from 'nodemailer';
-    
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
+      port: Number(process.env.SMTP_PORT) || 465,
+      secure: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -49,44 +43,43 @@ export async function POST(request: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_FROM,
+      from: `"Сайт AViSaT" <${process.env.SMTP_FROM}>`,
       to: process.env.SMTP_TO,
+      replyTo: email,
       subject: `Заявка з сайту від ${name}`,
       text: `
-        Ім'я: ${name}
-        Email: ${email}
-        
-        Повідомлення:
-        ${message}
-      `,
+Ім'я: ${name}
+Email: ${email}
+
+Повідомлення:
+${message}
+      `.trim(),
       html: `
         <h2>Нова заявка з сайту avisat.com.ua</h2>
         <p><strong>Ім'я:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <hr>
         <p><strong>Повідомлення:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
     });
-    */
 
-    // ВРЕМЕННО: логируем в консоль сервера
-    console.log('=== CONTACT FORM SUBMISSION ===');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    console.log('=== EMAIL SENT ===');
+    console.log('To:', process.env.SMTP_TO);
+    console.log('From:', name, email);
     console.log('Timestamp:', new Date().toISOString());
-    console.log('================================');
+    console.log('==================');
 
     return NextResponse.json({ 
       success: true, 
-      message: 'Повідомлення отримано' 
+      message: 'Повідомлення надіслано' 
     });
 
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error('Email send error:', error);
     
     return NextResponse.json(
-      { success: false, error: 'Помилка сервера' },
+      { success: false, error: 'Помилка відправки повідомлення' },
       { status: 500 }
     );
   }

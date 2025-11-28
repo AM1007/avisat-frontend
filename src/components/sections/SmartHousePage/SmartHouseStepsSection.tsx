@@ -57,7 +57,7 @@ export default function SmartHouseStepsSection() {
           
           <div className={styles.footer}>
             <p className={styles.footerText}>
-              Все — під ключ. Без головного болю. Без зайвих витрат.
+              Все – під ключ. Без головного болю. Без зайвих витрат.
             </p>
           </div>
         </div>

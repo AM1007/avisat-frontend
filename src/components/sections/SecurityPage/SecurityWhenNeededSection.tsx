@@ -4,7 +4,7 @@ import styles from './SecurityWhenNeededSection.module.css';
 
 const situations = [
   'Переїжджаєте в новий будинок чи квартиру',
-  'Плануєте відпустку — і хочете бути спокійними',
+  'Плануєте відпустку – і хочете бути спокійними',
   'Працюєте з цінним обладнанням, документами, грошима',
   'Маєте приватний будинок, офіс, магазин, склад',
   'Були спроби проникнення або крадіжки у районі',
@@ -50,7 +50,7 @@ export default function SecurityWhenNeededSection() {
             <div className={styles.alert}>
               <AlertIcon className={styles.alertIcon} />
               <div className={styles.alertContent}>
-                <p className={styles.alertTitle}>Кожен день без захисту — ризик.</p>
+                <p className={styles.alertTitle}>Кожен день без захисту – ризик.</p>
                 <p className={styles.alertText}>
                   Ми пропонуємо швидкий аудит об&apos;єкта і готове рішення вже за <span className={styles.red}>48 годин</span>.
                 </p>

@@ -7,7 +7,7 @@ export default function SmartHouseIntroSection() {
       <Container>
         <div className={styles.content}>
           <p className={styles.text}>
-            Ви можете керувати світлом, кліматом, технікою, безпекою та навіть шторами — 
+            Ви можете керувати світлом, кліматом, технікою, безпекою та навіть шторами – 
             зі смартфона або голосом.
           </p>
           <p className={styles.text}>

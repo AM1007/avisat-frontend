@@ -5,7 +5,7 @@ import ConsultButton from '@/components/ui/ConsultButton/ConsultButton';
 const contactMethods = [
   'Зателефонуйте напряму',
   'Напишіть лист на пошту',
-  'Залиште заявку через форму — ми зв’яжемось протягом дня',
+  'Залиште заявку через форму – ми зв’яжемось протягом дня',
 ];
 
 export default function ContactsHowToSection() {

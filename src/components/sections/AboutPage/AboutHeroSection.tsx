@@ -8,7 +8,7 @@ export default function AboutHeroSection() {
         <div className={styles.content}>
           <h1 className={styles.title}>Про компанію</h1>
           <p className={styles.subtitle}>
-            AViSaT — компанія з досвідом у сфері безпеки та автоматизації.
+            <span className={styles.red}>AViSaT</span> – компанія з досвідом у сфері безпеки та автоматизації.
           </p>
           <p className={styles.description}>
             Працюємо з 2012 року. Займаємось проєктуванням, встановленням і обслуговуванням систем: 

@@ -34,7 +34,7 @@ export default function SmartHouseScenariosSection() {
           
           <div className={styles.footer}>
             <p className={styles.footerText}>
-              Це не іграшка. Це — система оптимізації простору, часу та ресурсів.
+              Це не іграшка. Це система оптимізації простору, часу та ресурсів.
             </p>
           </div>
         </div>
